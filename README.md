@@ -6,3 +6,31 @@
 
 ## Introduction
 UIDevice extension to fetch current device info such commercial name (iPhone X instead of iPhone10,3).
+
+## Installation
+
+This framework is compatible with Carthage or Cocoapods, use one of both.
+
+### Carthage: Add this into your `Cartfile`
+```ogdl
+github "sebastianvarela/iOS-Alert-Controller" 
+```
+
+### Cocoapods: Add this into your `Podfile`
+```ogdl
+pod 'DeviceIdentificator' 
+```
+
+## Usage:
+
+```Swift
+let deviceModel = UIDevice.current.deviceModel
+print("Current device: \(deviceModel.name)")
+
+let isIpad = UIDevice.current.isIpad
+```
+
+```Objective-C
+NSString *deviceModelName = [UIDevice currentDevice].deviceModelName
+NSLog("Current device: %@", deviceModelName)
+```
