@@ -25,6 +25,11 @@ public extension UIDevice {
 
         return parseDeviceModel(identifier)
     }
+    
+    @objc
+    public var isIpad: Bool {
+        return deviceModel.name.contains("iPad")
+    }
 }
 
 public enum DeviceModel {
