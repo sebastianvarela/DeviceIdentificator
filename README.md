@@ -13,7 +13,7 @@ This framework is compatible with Carthage or Cocoapods, use one of both.
 
 ### Carthage: Add this into your `Cartfile`
 ```ogdl
-github "sebastianvarela/iOS-Alert-Controller" 
+github "sebastianvarela/DeviceIdentificator" 
 ```
 
 ### Cocoapods: Add this into your `Podfile`
@@ -23,6 +23,7 @@ pod 'DeviceIdentificator'
 
 ## Usage:
 
+Swift:
 ```Swift
 let deviceModel = UIDevice.current.deviceModel
 print("Current device: \(deviceModel.name)")
@@ -30,6 +31,7 @@ print("Current device: \(deviceModel.name)")
 let isIpad = UIDevice.current.isIpad
 ```
 
+Objective-C:
 ```Objective-C
 NSString *deviceModelName = [UIDevice currentDevice].deviceModelName
 NSLog("Current device: %@", deviceModelName)
