@@ -20,7 +20,7 @@ Add this into your `Podfile`:
 pod 'DeviceIdentificator' 
 ```
 
-## Usage:
+## Usage
 Swift:
 ```swift
 let deviceModel = UIDevice.current.deviceModel
