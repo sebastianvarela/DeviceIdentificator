@@ -31,6 +31,8 @@ let isIpad = UIDevice.current.isIpad
 
 Objective-C:
 ```Objective-C
-NSString *deviceModelName = [UIDevice currentDevice].deviceModelName
-NSLog("Current device: %@", deviceModelName)
+NSString *deviceModelName = [UIDevice currentDevice].deviceModelName;
+NSLog(@"Current device: %@", [UIDevice currentDevice].deviceModelName);
+    
+BOOL isIpad = [UIDevice currentDevice].isIpad;
 ```
