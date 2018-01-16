@@ -22,7 +22,7 @@ pod 'DeviceIdentificator'
 
 ## Usage:
 Swift:
-```Swift
+```swift
 let deviceModel = UIDevice.current.deviceModel
 print("Current device: \(deviceModel.name)")
 
@@ -30,7 +30,7 @@ let isIpad = UIDevice.current.isIpad
 ```
 
 Objective-C:
-```Objective-C
+```objectivec
 NSString *deviceModelName = [UIDevice currentDevice].deviceModelName;
 NSLog(@"Current device: %@", [UIDevice currentDevice].deviceModelName);
     
