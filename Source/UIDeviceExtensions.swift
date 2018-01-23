@@ -27,6 +27,16 @@ public extension UIDevice {
     }
     
     @objc
+    var isSimulator: Bool {
+        switch deviceModel {
+        case .iPadSimulator, .iPhoneSimulator:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    @objc
     public var isIpad: Bool {
         return deviceModel.name.contains("iPad")
     }
