@@ -1,13 +1,6 @@
 import UIKit
 
 public extension UIDevice {
-    @objc
-    var deviceModelName: NSString {
-        return deviceModel.name as NSString
-    }
-}
-
-public extension UIDevice {
     public var deviceModel: DeviceModel {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -24,6 +17,11 @@ public extension UIDevice {
         }
 
         return parseDeviceModel(identifier)
+    }
+    
+    @objc
+    var deviceModelName: NSString {
+        return deviceModel.name as NSString
     }
     
     @objc
