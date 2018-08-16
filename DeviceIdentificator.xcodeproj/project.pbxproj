@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2566523212614270061CCF7 /* DeviceIdentificatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */; };
+		E2566525212614270061CCF7 /* DeviceIdentificator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */; };
 		E2A36507200D104900668DF9 /* DeviceIdentificator.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A364F9200D104900668DF9 /* DeviceIdentificator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A36511200D10DA00668DF9 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A36510200D10DA00668DF9 /* UIDeviceExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E2566526212614270061CCF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2A364ED200D104900668DF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A364F5200D104900668DF9;
+			remoteInfo = DeviceIdentificator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceIdentificatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentificatorTests.swift; sourceTree = "<group>"; };
+		E2566524212614270061CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceIdentificator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A364F9200D104900668DF9 /* DeviceIdentificator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceIdentificator.h; sourceTree = "<group>"; };
 		E2A364FA200D104900668DF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +34,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E256651D212614270061CCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2566525212614270061CCF7 /* DeviceIdentificator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A364F2200D104900668DF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2566521212614270061CCF7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */,
+				E2566524212614270061CCF7 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		E2A364EC200D104900668DF9 = {
 			isa = PBXGroup;
 			children = (
 				E2A364F8200D104900668DF9 /* Source */,
+				E2566521212614270061CCF7 /* Tests */,
 				E2A364F7200D104900668DF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */,
+				E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E256651F212614270061CCF7 /* DeviceIdentificatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificatorTests" */;
+			buildPhases = (
+				E256651C212614270061CCF7 /* Sources */,
+				E256651D212614270061CCF7 /* Frameworks */,
+				E256651E212614270061CCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2566527212614270061CCF7 /* PBXTargetDependency */,
+			);
+			name = DeviceIdentificatorTests;
+			productName = DeviceIdentificatorTests;
+			productReference = E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E2A364F5200D104900668DF9 /* DeviceIdentificator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator" */;
@@ -93,10 +145,14 @@
 		E2A364ED200D104900668DF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Sebastián Varela";
 				TargetAttributes = {
+					E256651F212614270061CCF7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					E2A364F5200D104900668DF9 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -117,11 +173,19 @@
 			projectRoot = "";
 			targets = (
 				E2A364F5200D104900668DF9 /* DeviceIdentificator */,
+				E256651F212614270061CCF7 /* DeviceIdentificatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E256651E212614270061CCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A364F4200D104900668DF9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +196,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E256651C212614270061CCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2566523212614270061CCF7 /* DeviceIdentificatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A364F1200D104900668DF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,7 +214,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E2566527212614270061CCF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2A364F5200D104900668DF9 /* DeviceIdentificator */;
+			targetProxy = E2566526212614270061CCF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E2566528212614270061CCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2566529212614270061CCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E2A36508200D104900668DF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -157,6 +271,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -164,6 +279,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -217,6 +333,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -224,6 +341,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -302,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2566528212614270061CCF7 /* Debug */,
+				E2566529212614270061CCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2A364F0200D104900668DF9 /* Build configuration list for PBXProject "DeviceIdentificator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
