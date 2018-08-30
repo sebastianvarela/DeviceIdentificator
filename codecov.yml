@@ -1,6 +1,3 @@
-comment:
-  layout: "header, changes, diff, sunburst"
-
 coverage:
   range: 70..100
   round: down
