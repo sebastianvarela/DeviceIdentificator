@@ -1,5 +1,5 @@
-language: objective-c
+language: swift
 script:
-   - xcodebuild -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test | xcpretty
+- xcodebuild -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test | xcpretty
 after_success:
-   - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
