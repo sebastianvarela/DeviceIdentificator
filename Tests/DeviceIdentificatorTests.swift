@@ -11,7 +11,7 @@ class DeviceIdentificatorTests: XCTestCase {
             XCTAssertFalse(UIDevice.current.isSimulator)
         #endif
     }
-    
+
     func testIsIpad() {
         switch UI_USER_INTERFACE_IDIOM() {
         case .pad:

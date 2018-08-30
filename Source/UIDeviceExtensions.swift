@@ -18,12 +18,12 @@ public extension UIDevice {
 
         return parseDeviceModel(identifier)
     }
-    
+
     @objc
     var deviceModelName: NSString {
         return deviceModel.name as NSString
     }
-    
+
     @objc
     var isSimulator: Bool {
         switch deviceModel {
@@ -33,7 +33,7 @@ public extension UIDevice {
             return false
         }
     }
-    
+
     @objc
     public var isIpad: Bool {
         return deviceModel.name.contains("iPad")
@@ -136,15 +136,15 @@ public enum DeviceModel {
         case .iPadSimulator: return "iPad Simulator"
         case .iPhoneSimulator: return "iPhone Simulator"
 
-        case .iPhoneUnknown(let id): return "Unknown iPhone (\(id))"
-        case .iPadUnknown(let id): return "Unknown iPad (\(id))"
-        case .iPodUnknown(let id): return "Unknown iPod (\(id))"
-        case .unknown(let id): return "Unknown iOS device (\(id))"
+        case .iPhoneUnknown(let model): return "Unknown iPhone (\(model))"
+        case .iPadUnknown(let model): return "Unknown iPad (\(model))"
+        case .iPodUnknown(let model): return "Unknown iPod (\(model))"
+        case .unknown(let model): return "Unknown iOS device (\(model))"
         }
     }
 }
 
-fileprivate func parseDeviceModel(_ identifier: String) -> DeviceModel {
+private func parseDeviceModel(_ identifier: String) -> DeviceModel {
 
     if identifier == "i386" || identifier == "x86_64" {
         let smallerScreen = UIScreen.main.bounds.size.width < 768

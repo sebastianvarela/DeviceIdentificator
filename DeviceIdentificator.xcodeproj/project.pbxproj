@@ -125,6 +125,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator" */;
 			buildPhases = (
+				E20BA6072138AFCB005BA13B /* Swiftlint */,
 				E2A364F1200D104900668DF9 /* Sources */,
 				E2A364F2200D104900668DF9 /* Frameworks */,
 				E2A364F3200D104900668DF9 /* Headers */,
@@ -194,6 +195,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E20BA6072138AFCB005BA13B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E256651C212614270061CCF7 /* Sources */ = {
