@@ -2,7 +2,7 @@ language: swift
 script:
 - set -o pipefail
 - swift --version
-- xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
+- xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF ios -J 'DeviceIdentificator'
 - swiftlint lint
 - pod lib lint
