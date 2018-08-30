@@ -1,1 +1,9 @@
-secret:L+1RRYsJfxpTGbm3z/Rj+GwEOnhKHQotZp4zG3VaVLSRqJ8LRKiEHbOtPY96F2+k
+comment:
+  layout: "header, changes, diff, sunburst"
+
+coverage:
+  range: 70..100
+  round: down
+  precision: 2
+  ignore:
+  - Tests/.*
