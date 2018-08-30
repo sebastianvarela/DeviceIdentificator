@@ -1,5 +1,6 @@
 language: swift
 script:
-- xcodebuild -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test
-after_success:
-- bash <(curl -s https://codecov.io/bash) -J 'DeviceIdentificator'
+- xcodebuild -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator -destination "platform=iOS Simulator,name=iPhone 7" -configuration Debug -enableCodeCoverage YES clean build test | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
+- bash <(curl -s https://codecov.io/bash) -cF ios -J 'DeviceIdentificator'
+- swiftlint lint
+- pod lib lint
