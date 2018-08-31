@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sebastián Varela. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for DeviceIdentificator.
 FOUNDATION_EXPORT double DeviceIdentificatorVersionNumber;

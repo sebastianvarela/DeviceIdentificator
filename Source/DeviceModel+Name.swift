@@ -48,8 +48,12 @@ public extension DeviceModel {
         case .iPad5G: return "iPad 5G"
         case .iPad6G: return "iPad 6G"
 
+        case .appleTV4G: return "Apple TV 4G"
+        case .appleTV4K: return "Apple TV 4K"
+
         case .iPadSimulator: return "iPad Simulator"
         case .iPhoneSimulator: return "iPhone Simulator"
+        case .appleTVSimulator: return "Apple TV Simulator"
 
         case .iPhoneUnknown(let model): return "Unknown iPhone (\(model))"
         case .iPadUnknown(let model): return "Unknown iPad (\(model))"

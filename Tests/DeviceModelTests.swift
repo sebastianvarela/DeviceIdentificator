@@ -19,6 +19,9 @@ public class DeviceModelTests: XCTestCase {
         case .phone:
             XCTAssertEqual(deviceModel32b, .iPhoneSimulator)
             XCTAssertEqual(deviceModel64b, .iPhoneSimulator)
+        case .tv:
+            XCTAssertEqual(deviceModel32b, .appleTVSimulator)
+            XCTAssertEqual(deviceModel64b, .appleTVSimulator)
         default:
             XCTFail("not supported yet")
         }

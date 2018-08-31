@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public enum DeviceModel: Equatable {
     case iPhone1G
@@ -46,8 +47,12 @@ public enum DeviceModel: Equatable {
     case iPad5G
     case iPad6G
 
+    case appleTV4G
+    case appleTV4K
+
     case iPadSimulator
     case iPhoneSimulator
+    case appleTVSimulator
 
     case iPhoneUnknown(model: String)
     case iPadUnknown(model: String)
@@ -57,8 +62,12 @@ public enum DeviceModel: Equatable {
     internal init(_ identifier: DeviceIdentifier) {
         guard let model = identifier.model else {
             if identifier.rawValue == "i386" || identifier.rawValue == "x86_64" {
-                let smallerScreen = UIScreen.main.bounds.size.width < 768
-                self = smallerScreen ? .iPhoneSimulator : .iPadSimulator
+                #if os(iOS)
+                    let smallerScreen = UIScreen.main.bounds.size.width < 768
+                    self = smallerScreen ? .iPhoneSimulator : .iPadSimulator
+                #elseif os(tvOS)
+                    self = .appleTVSimulator
+                #endif
             } else if identifier.rawValue.hasPrefix("iPhone") {
                 self = .iPhoneUnknown(model: identifier.rawValue)
             } else if identifier.rawValue.hasPrefix("iPod") {

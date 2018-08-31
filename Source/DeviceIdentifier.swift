@@ -61,6 +61,9 @@ internal struct DeviceIdentifier {
         case "iPad6,11", "iPad6,12": return .iPad5G
         case "iPad7,5", "iPad7,6": return .iPad6G
 
+        case "AppleTV5,3": return .appleTV4G
+        case "AppleTV6,2": return .appleTV4K
+
         default: return nil
         }
     }

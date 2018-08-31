@@ -32,6 +32,16 @@ public extension UIDevice {
 
     @objc
     public var isIpad: Bool {
-        return deviceModel.name.contains("iPad")
+        return deviceModel.isIpad
+    }
+
+    @objc
+    public var isIphone: Bool {
+        return deviceModel.isIphone
+    }
+
+    @objc
+    public var isAppleTV: Bool {
+        return deviceModel.isAppleTV
     }
 }

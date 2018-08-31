@@ -12,7 +12,17 @@
 		E20BA60D2139406F005BA13B /* DeviceModel+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */; };
 		E20BA61021394202005BA13B /* DeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */; };
 		E20BA612213949D1005BA13B /* DeviceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA611213949D1005BA13B /* DeviceModelTests.swift */; };
-		E20BA61421395AA8005BA13B /* DeviceModel+IsSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA61321395AA8005BA13B /* DeviceModel+IsSimulator.swift */; };
+		E20BA61421395AA8005BA13B /* DeviceModel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA61321395AA8005BA13B /* DeviceModel+Helpers.swift */; };
+		E20BA62B2139DD8D005BA13B /* DeviceIdentificator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20BA61A2139DD42005BA13B /* DeviceIdentificator.framework */; };
+		E20BA6312139DDF9005BA13B /* DeviceIdentificator.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A364F9200D104900668DF9 /* DeviceIdentificator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20BA6322139DE33005BA13B /* UIDeviceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */; };
+		E20BA6332139DE36005BA13B /* DeviceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA611213949D1005BA13B /* DeviceModelTests.swift */; };
+		E20BA6342139DE39005BA13B /* DeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */; };
+		E20BA6352139DE4C005BA13B /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A36510200D10DA00668DF9 /* UIDeviceExtensions.swift */; };
+		E20BA6362139DE4C005BA13B /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA608213924E6005BA13B /* DeviceModel.swift */; };
+		E20BA6372139DE4C005BA13B /* DeviceModel+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */; };
+		E20BA6382139DE4C005BA13B /* DeviceModel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA61321395AA8005BA13B /* DeviceModel+Helpers.swift */; };
+		E20BA6392139DE4C005BA13B /* DeviceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60A21393D5C005BA13B /* DeviceIdentifier.swift */; };
 		E2566523212614270061CCF7 /* UIDeviceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */; };
 		E2566525212614270061CCF7 /* DeviceIdentificator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */; };
 		E2A36507200D104900668DF9 /* DeviceIdentificator.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A364F9200D104900668DF9 /* DeviceIdentificator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E20BA62C2139DD8D005BA13B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2A364ED200D104900668DF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20BA6192139DD42005BA13B;
+			remoteInfo = "DeviceIdentificator-tvOS";
+		};
 		E2566526212614270061CCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E2A364ED200D104900668DF9 /* Project object */;
@@ -35,7 +52,9 @@
 		E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceModel+Name.swift"; sourceTree = "<group>"; };
 		E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentifierTests.swift; sourceTree = "<group>"; };
 		E20BA611213949D1005BA13B /* DeviceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelTests.swift; sourceTree = "<group>"; };
-		E20BA61321395AA8005BA13B /* DeviceModel+IsSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceModel+IsSimulator.swift"; sourceTree = "<group>"; };
+		E20BA61321395AA8005BA13B /* DeviceModel+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceModel+Helpers.swift"; sourceTree = "<group>"; };
+		E20BA61A2139DD42005BA13B /* DeviceIdentificator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceIdentificator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20BA6262139DD8D005BA13B /* DeviceIdentificator-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeviceIdentificator-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2566520212614270061CCF7 /* DeviceIdentificator-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeviceIdentificator-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensionsTests.swift; sourceTree = "<group>"; };
 		E2566524212614270061CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +65,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E20BA6162139DD42005BA13B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20BA6232139DD8D005BA13B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20BA62B2139DD8D005BA13B /* DeviceIdentificator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E256651D212614270061CCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +123,8 @@
 			children = (
 				E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */,
 				E2566520212614270061CCF7 /* DeviceIdentificator-iOSTests.xctest */,
+				E20BA61A2139DD42005BA13B /* DeviceIdentificator.framework */,
+				E20BA6262139DD8D005BA13B /* DeviceIdentificator-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +135,7 @@
 				E2A36510200D10DA00668DF9 /* UIDeviceExtensions.swift */,
 				E20BA608213924E6005BA13B /* DeviceModel.swift */,
 				E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */,
-				E20BA61321395AA8005BA13B /* DeviceModel+IsSimulator.swift */,
+				E20BA61321395AA8005BA13B /* DeviceModel+Helpers.swift */,
 				E20BA60A21393D5C005BA13B /* DeviceIdentifier.swift */,
 				E2A364F9200D104900668DF9 /* DeviceIdentificator.h */,
 				E2A364FA200D104900668DF9 /* Info.plist */,
@@ -110,6 +146,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E20BA6172139DD42005BA13B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20BA6312139DDF9005BA13B /* DeviceIdentificator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A364F3200D104900668DF9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +165,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E20BA6192139DD42005BA13B /* DeviceIdentificator-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20BA6212139DD42005BA13B /* Build configuration list for PBXNativeTarget "DeviceIdentificator-tvOS" */;
+			buildPhases = (
+				E20BA63B2139E0AC005BA13B /* Swiftlint */,
+				E20BA6152139DD42005BA13B /* Sources */,
+				E20BA6162139DD42005BA13B /* Frameworks */,
+				E20BA6172139DD42005BA13B /* Headers */,
+				E20BA6182139DD42005BA13B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DeviceIdentificator-tvOS";
+			productName = "DeviceIdentificator-tvOS";
+			productReference = E20BA61A2139DD42005BA13B /* DeviceIdentificator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E20BA6252139DD8D005BA13B /* DeviceIdentificator-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20BA62E2139DD8D005BA13B /* Build configuration list for PBXNativeTarget "DeviceIdentificator-tvOSTests" */;
+			buildPhases = (
+				E20BA6222139DD8D005BA13B /* Sources */,
+				E20BA6232139DD8D005BA13B /* Frameworks */,
+				E20BA6242139DD8D005BA13B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E20BA62D2139DD8D005BA13B /* PBXTargetDependency */,
+			);
+			name = "DeviceIdentificator-tvOSTests";
+			productName = "DeviceIdentificator-tvOSTests";
+			productReference = E20BA6262139DD8D005BA13B /* DeviceIdentificator-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E256651F212614270061CCF7 /* DeviceIdentificator-iOSTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOSTests" */;
@@ -168,6 +249,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Sebastián Varela";
 				TargetAttributes = {
+					E20BA6192139DD42005BA13B = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					E20BA6252139DD8D005BA13B = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					E256651F212614270061CCF7 = {
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
@@ -193,11 +282,27 @@
 			targets = (
 				E2A364F5200D104900668DF9 /* DeviceIdentificator-iOS */,
 				E256651F212614270061CCF7 /* DeviceIdentificator-iOSTests */,
+				E20BA6192139DD42005BA13B /* DeviceIdentificator-tvOS */,
+				E20BA6252139DD8D005BA13B /* DeviceIdentificator-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E20BA6182139DD42005BA13B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20BA6242139DD8D005BA13B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E256651E212614270061CCF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,9 +334,45 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi";
 		};
+		E20BA63B2139E0AC005BA13B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E20BA6152139DD42005BA13B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20BA6392139DE4C005BA13B /* DeviceIdentifier.swift in Sources */,
+				E20BA6382139DE4C005BA13B /* DeviceModel+Helpers.swift in Sources */,
+				E20BA6352139DE4C005BA13B /* UIDeviceExtensions.swift in Sources */,
+				E20BA6362139DE4C005BA13B /* DeviceModel.swift in Sources */,
+				E20BA6372139DE4C005BA13B /* DeviceModel+Name.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20BA6222139DD8D005BA13B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20BA6322139DE33005BA13B /* UIDeviceExtensionsTests.swift in Sources */,
+				E20BA6342139DE39005BA13B /* DeviceIdentifierTests.swift in Sources */,
+				E20BA6332139DE36005BA13B /* DeviceModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E256651C212614270061CCF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,7 +389,7 @@
 			files = (
 				E20BA60B21393D5C005BA13B /* DeviceIdentifier.swift in Sources */,
 				E2A36511200D10DA00668DF9 /* UIDeviceExtensions.swift in Sources */,
-				E20BA61421395AA8005BA13B /* DeviceModel+IsSimulator.swift in Sources */,
+				E20BA61421395AA8005BA13B /* DeviceModel+Helpers.swift in Sources */,
 				E20BA60D2139406F005BA13B /* DeviceModel+Name.swift in Sources */,
 				E20BA609213924E6005BA13B /* DeviceModel.swift in Sources */,
 			);
@@ -257,6 +398,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E20BA62D2139DD8D005BA13B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20BA6192139DD42005BA13B /* DeviceIdentificator-tvOS */;
+			targetProxy = E20BA62C2139DD8D005BA13B /* PBXContainerItemProxy */;
+		};
 		E2566527212614270061CCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E2A364F5200D104900668DF9 /* DeviceIdentificator-iOS */;
@@ -265,6 +411,84 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E20BA61F2139DD42005BA13B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificator;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		E20BA6202139DD42005BA13B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificator;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		E20BA62F2139DD8D005BA13B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		E20BA6302139DD8D005BA13B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		E2566528212614270061CCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,6 +686,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E20BA6212139DD42005BA13B /* Build configuration list for PBXNativeTarget "DeviceIdentificator-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20BA61F2139DD42005BA13B /* Debug */,
+				E20BA6202139DD42005BA13B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20BA62E2139DD8D005BA13B /* Build configuration list for PBXNativeTarget "DeviceIdentificator-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20BA62F2139DD8D005BA13B /* Debug */,
+				E20BA6302139DD8D005BA13B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

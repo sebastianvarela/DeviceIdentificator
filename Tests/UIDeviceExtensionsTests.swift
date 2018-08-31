@@ -17,6 +17,34 @@ public class DeviceIdentificatorTests: XCTestCase {
             XCTAssertTrue(UIDevice.current.isIpad)
         case .phone:
             XCTAssertFalse(UIDevice.current.isIpad)
+        case .tv:
+            XCTAssertFalse(UIDevice.current.isIpad)
+        default:
+            XCTFail("not supported yet")
+        }
+    }
+
+    public func testIsIphone() {
+        switch UI_USER_INTERFACE_IDIOM() {
+        case .pad:
+            XCTAssertFalse(UIDevice.current.isIphone)
+        case .phone:
+            XCTAssertTrue(UIDevice.current.isIphone)
+        case .tv:
+            XCTAssertFalse(UIDevice.current.isIphone)
+        default:
+            XCTFail("not supported yet")
+        }
+    }
+
+    public func testIsAppleTV() {
+        switch UI_USER_INTERFACE_IDIOM() {
+        case .phone:
+            XCTAssertFalse(UIDevice.current.isAppleTV)
+        case .pad:
+            XCTAssertFalse(UIDevice.current.isAppleTV)
+        case .tv:
+            XCTAssertTrue(UIDevice.current.isAppleTV)
         default:
             XCTFail("not supported yet")
         }
