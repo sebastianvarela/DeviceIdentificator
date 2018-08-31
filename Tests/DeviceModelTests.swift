@@ -2,6 +2,12 @@
 import XCTest
 
 public class DeviceModelTests: XCTestCase {
+    public func testIsSimulator() {
+        XCTAssertTrue(DeviceModel.iPadSimulator.isSimulator)
+        XCTAssertTrue(DeviceModel.iPhoneSimulator.isSimulator)
+        XCTAssertFalse(DeviceModel.iPhone6Plus.isSimulator)
+    }
+
     public func testUnknownSimulator() {
         let deviceModel32b = DeviceModel(DeviceIdentifier("i386"))
         let deviceModel64b = DeviceModel(DeviceIdentifier("x86_64"))

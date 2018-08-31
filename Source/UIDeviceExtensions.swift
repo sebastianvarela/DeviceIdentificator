@@ -27,12 +27,7 @@ public extension UIDevice {
 
     @objc
     var isSimulator: Bool {
-        switch deviceModel {
-        case .iPadSimulator, .iPhoneSimulator:
-            return true
-        default:
-            return false
-        }
+        return deviceModel.isSimulator
     }
 
     @objc
