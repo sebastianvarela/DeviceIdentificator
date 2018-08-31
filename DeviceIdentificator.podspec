@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DeviceIdentificator"
-  s.version      = "1.2.1"
+  s.version      = "1.3.0"
   s.summary      = "UIDeviceExtension to fetch current device info such commercial name (iPhone X instead of iPhone10,3)."
   s.description  = <<-DESC
   UIDevice extension written in Swift to fetch current device info such commercial name (iPhone X instead of iPhone10,3).
@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
   s.author             = { "Sebastián Varela" => "sebastian.varela@s3ba.net" }
   s.social_media_url   = "http://twitter.com/skirmish84"
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '10.1'
 
   s.source       = { :git => "https://github.com/sebastianvarela/DeviceIdentificator.git", :tag => "v#{s.version}" }
   s.source_files  = "Source", "Source/**/*.{swift}"
