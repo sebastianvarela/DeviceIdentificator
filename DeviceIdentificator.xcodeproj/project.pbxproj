@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2566523212614270061CCF7 /* DeviceIdentificatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */; };
+		E20BA609213924E6005BA13B /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA608213924E6005BA13B /* DeviceModel.swift */; };
+		E20BA60B21393D5C005BA13B /* DeviceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60A21393D5C005BA13B /* DeviceIdentifier.swift */; };
+		E20BA60D2139406F005BA13B /* DeviceModel+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */; };
+		E20BA61021394202005BA13B /* DeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */; };
+		E20BA612213949D1005BA13B /* DeviceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA611213949D1005BA13B /* DeviceModelTests.swift */; };
+		E2566523212614270061CCF7 /* UIDeviceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */; };
 		E2566525212614270061CCF7 /* DeviceIdentificator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */; };
 		E2A36507200D104900668DF9 /* DeviceIdentificator.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A364F9200D104900668DF9 /* DeviceIdentificator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A36511200D10DA00668DF9 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A36510200D10DA00668DF9 /* UIDeviceExtensions.swift */; };
@@ -24,8 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E20BA608213924E6005BA13B /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		E20BA60A21393D5C005BA13B /* DeviceIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentifier.swift; sourceTree = "<group>"; };
+		E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceModel+Name.swift"; sourceTree = "<group>"; };
+		E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentifierTests.swift; sourceTree = "<group>"; };
+		E20BA611213949D1005BA13B /* DeviceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelTests.swift; sourceTree = "<group>"; };
 		E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceIdentificatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentificatorTests.swift; sourceTree = "<group>"; };
+		E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensionsTests.swift; sourceTree = "<group>"; };
 		E2566524212614270061CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceIdentificator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A364F9200D104900668DF9 /* DeviceIdentificator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceIdentificator.h; sourceTree = "<group>"; };
@@ -55,7 +65,9 @@
 		E2566521212614270061CCF7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E2566522212614270061CCF7 /* DeviceIdentificatorTests.swift */,
+				E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */,
+				E20BA611213949D1005BA13B /* DeviceModelTests.swift */,
+				E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */,
 				E2566524212614270061CCF7 /* Info.plist */,
 			);
 			path = Tests;
@@ -83,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				E2A36510200D10DA00668DF9 /* UIDeviceExtensions.swift */,
+				E20BA608213924E6005BA13B /* DeviceModel.swift */,
+				E20BA60C2139406F005BA13B /* DeviceModel+Name.swift */,
+				E20BA60A21393D5C005BA13B /* DeviceIdentifier.swift */,
 				E2A364F9200D104900668DF9 /* DeviceIdentificator.h */,
 				E2A364FA200D104900668DF9 /* Info.plist */,
 			);
@@ -218,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2566523212614270061CCF7 /* DeviceIdentificatorTests.swift in Sources */,
+				E20BA61021394202005BA13B /* DeviceIdentifierTests.swift in Sources */,
+				E20BA612213949D1005BA13B /* DeviceModelTests.swift in Sources */,
+				E2566523212614270061CCF7 /* UIDeviceExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20BA60B21393D5C005BA13B /* DeviceIdentifier.swift in Sources */,
 				E2A36511200D10DA00668DF9 /* UIDeviceExtensions.swift in Sources */,
+				E20BA60D2139406F005BA13B /* DeviceModel+Name.swift in Sources */,
+				E20BA609213924E6005BA13B /* DeviceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

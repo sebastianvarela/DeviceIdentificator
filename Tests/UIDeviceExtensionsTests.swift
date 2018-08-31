@@ -1,9 +1,8 @@
 @testable import DeviceIdentificator
 import XCTest
 
-class DeviceIdentificatorTests: XCTestCase {
-
-    func testIsSimulator() {
+public class DeviceIdentificatorTests: XCTestCase {
+    public func testIsSimulator() {
         #if targetEnvironment(simulator)
             XCTAssertTrue(UIDevice.current.isSimulator)
             XCTAssertTrue(UIDevice.current.deviceModelName.lowercased.contains("simulator"))
@@ -12,7 +11,7 @@ class DeviceIdentificatorTests: XCTestCase {
         #endif
     }
 
-    func testIsIpad() {
+    public func testIsIpad() {
         switch UI_USER_INTERFACE_IDIOM() {
         case .pad:
             XCTAssertTrue(UIDevice.current.isIpad)
