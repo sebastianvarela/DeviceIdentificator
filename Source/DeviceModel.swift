@@ -38,8 +38,13 @@ public enum DeviceModel: Equatable {
     case iPadAir1G
     case iPadAir2G
 
-    case iPadPro9inch1G
-    case iPadPro12inch1G
+    case iPadPro9d7inch1G
+    case iPadPro10d5inch1G
+    case iPadPro12d9inch1G
+    case iPadPro12d9inch2G
+
+    case iPad5G
+    case iPad6G
 
     case iPadSimulator
     case iPhoneSimulator

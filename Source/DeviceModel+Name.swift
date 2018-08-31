@@ -40,8 +40,13 @@ public extension DeviceModel {
         case .iPadAir1G: return "iPad Air"
         case .iPadAir2G: return "iPad Air 2"
 
-        case .iPadPro9inch1G: return "iPad Pro 9.7-Inch 1G"
-        case .iPadPro12inch1G: return "iPad Pro 12.9-Inch 1G"
+        case .iPadPro9d7inch1G: return "iPad Pro 9.7-Inch 1G"
+        case .iPadPro10d5inch1G: return "iPad Pro 10.5-Inch 1G"
+        case .iPadPro12d9inch1G: return "iPad Pro 12.9-Inch 1G"
+        case .iPadPro12d9inch2G: return "iPad Pro 12.9-Inch 2G"
+
+        case .iPad5G: return "iPad 5G"
+        case .iPad6G: return "iPad 6G"
 
         case .iPadSimulator: return "iPad Simulator"
         case .iPhoneSimulator: return "iPhone Simulator"

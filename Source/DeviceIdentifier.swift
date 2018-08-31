@@ -53,8 +53,13 @@ internal struct DeviceIdentifier {
         case "iPad4,1", "iPad4,2", "iPad4,3": return .iPadAir1G
         case "iPad5,3", "iPad5,4": return .iPadAir2G
 
-        case "iPad6,3", "iPad6,4": return .iPadPro9inch1G
-        case "iPad6,7", "iPad6,8": return .iPadPro12inch1G
+        case "iPad6,3", "iPad6,4": return .iPadPro9d7inch1G
+        case "iPad7,3", "iPad7,4": return .iPadPro10d5inch1G
+        case "iPad6,7", "iPad6,8": return .iPadPro12d9inch1G
+        case "iPad7,1", "iPad7,2": return .iPadPro12d9inch2G
+
+        case "iPad6,11", "iPad6,12": return .iPad5G
+        case "iPad7,5", "iPad7,6": return .iPad6G
 
         default: return nil
         }
