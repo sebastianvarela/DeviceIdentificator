@@ -36,7 +36,7 @@
 		E20BA60E213941E1005BA13B /* DeviceIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentifierTests.swift; sourceTree = "<group>"; };
 		E20BA611213949D1005BA13B /* DeviceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelTests.swift; sourceTree = "<group>"; };
 		E20BA61321395AA8005BA13B /* DeviceModel+IsSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceModel+IsSimulator.swift"; sourceTree = "<group>"; };
-		E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceIdentificatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2566520212614270061CCF7 /* DeviceIdentificator-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeviceIdentificator-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2566522212614270061CCF7 /* UIDeviceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensionsTests.swift; sourceTree = "<group>"; };
 		E2566524212614270061CCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceIdentificator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */,
-				E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */,
+				E2566520212614270061CCF7 /* DeviceIdentificator-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E256651F212614270061CCF7 /* DeviceIdentificatorTests */ = {
+		E256651F212614270061CCF7 /* DeviceIdentificator-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificatorTests" */;
+			buildConfigurationList = E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOSTests" */;
 			buildPhases = (
 				E256651C212614270061CCF7 /* Sources */,
 				E256651D212614270061CCF7 /* Frameworks */,
@@ -134,14 +134,14 @@
 			dependencies = (
 				E2566527212614270061CCF7 /* PBXTargetDependency */,
 			);
-			name = DeviceIdentificatorTests;
+			name = "DeviceIdentificator-iOSTests";
 			productName = DeviceIdentificatorTests;
-			productReference = E2566520212614270061CCF7 /* DeviceIdentificatorTests.xctest */;
+			productReference = E2566520212614270061CCF7 /* DeviceIdentificator-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E2A364F5200D104900668DF9 /* DeviceIdentificator */ = {
+		E2A364F5200D104900668DF9 /* DeviceIdentificator-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator" */;
+			buildConfigurationList = E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOS" */;
 			buildPhases = (
 				E20BA6072138AFCB005BA13B /* Swiftlint */,
 				E2A364F1200D104900668DF9 /* Sources */,
@@ -153,7 +153,7 @@
 			);
 			dependencies = (
 			);
-			name = DeviceIdentificator;
+			name = "DeviceIdentificator-iOS";
 			productName = DeviceIdentificator;
 			productReference = E2A364F6200D104900668DF9 /* DeviceIdentificator.framework */;
 			productType = "com.apple.product-type.framework";
@@ -191,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2A364F5200D104900668DF9 /* DeviceIdentificator */,
-				E256651F212614270061CCF7 /* DeviceIdentificatorTests */,
+				E2A364F5200D104900668DF9 /* DeviceIdentificator-iOS */,
+				E256651F212614270061CCF7 /* DeviceIdentificator-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,7 +259,7 @@
 /* Begin PBXTargetDependency section */
 		E2566527212614270061CCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E2A364F5200D104900668DF9 /* DeviceIdentificator */;
+			target = E2A364F5200D104900668DF9 /* DeviceIdentificator-iOS */;
 			targetProxy = E2566526212614270061CCF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -353,6 +353,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = DeviceIdentificator;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -408,6 +409,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DeviceIdentificator;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -429,8 +431,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianvarela.DeviceIdentificator;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificator;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -451,8 +452,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianvarela.DeviceIdentificator;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.s3ba.DeviceIdentificator;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +462,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificatorTests" */ = {
+		E256652A212614270061CCF7 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2566528212614270061CCF7 /* Debug */,
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator" */ = {
+		E2A3650A200D104900668DF9 /* Build configuration list for PBXNativeTarget "DeviceIdentificator-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2A3650B200D104900668DF9 /* Debug */,

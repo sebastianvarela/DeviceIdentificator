@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E2A364F5200D104900668DF9"
                BuildableName = "DeviceIdentificator.framework"
-               BlueprintName = "DeviceIdentificator"
+               BlueprintName = "DeviceIdentificator-iOS"
                ReferencedContainer = "container:DeviceIdentificator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E256651F212614270061CCF7"
-               BuildableName = "DeviceIdentificatorTests.xctest"
-               BlueprintName = "DeviceIdentificatorTests"
+               BuildableName = "DeviceIdentificator-iOSTests.xctest"
+               BlueprintName = "DeviceIdentificator-iOSTests"
                ReferencedContainer = "container:DeviceIdentificator.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2A364F5200D104900668DF9"
             BuildableName = "DeviceIdentificator.framework"
-            BlueprintName = "DeviceIdentificator"
+            BlueprintName = "DeviceIdentificator-iOS"
             ReferencedContainer = "container:DeviceIdentificator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2A364F5200D104900668DF9"
             BuildableName = "DeviceIdentificator.framework"
-            BlueprintName = "DeviceIdentificator"
+            BlueprintName = "DeviceIdentificator-iOS"
             ReferencedContainer = "container:DeviceIdentificator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E2A364F5200D104900668DF9"
             BuildableName = "DeviceIdentificator.framework"
-            BlueprintName = "DeviceIdentificator"
+            BlueprintName = "DeviceIdentificator-iOS"
             ReferencedContainer = "container:DeviceIdentificator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
