@@ -42,6 +42,9 @@ public class DeviceIdentifierTests: XCTestCase {
         XCTAssertEqual(DeviceIdentifier("iPhone10,5").model, .iPhone8Plus)
         XCTAssertEqual(DeviceIdentifier("iPhone10,3").model, .iPhoneX)
         XCTAssertEqual(DeviceIdentifier("iPhone10,6").model, .iPhoneX)
+        XCTAssertEqual(DeviceIdentifier("iPhone11,8").model, .iPhoneXR)
+        XCTAssertEqual(DeviceIdentifier("iPhone11,2").model, .iPhoneXS)
+        XCTAssertEqual(DeviceIdentifier("iPhone11,6").model, .iPhoneXSMax)
     }
 
     public func testTabletIdentificators() {
@@ -82,10 +85,18 @@ public class DeviceIdentifierTests: XCTestCase {
         XCTAssertEqual(DeviceIdentifier("iPad6,4").model, .iPadPro9d7inch1G)
         XCTAssertEqual(DeviceIdentifier("iPad7,3").model, .iPadPro10d5inch1G)
         XCTAssertEqual(DeviceIdentifier("iPad7,4").model, .iPadPro10d5inch1G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,1").model, .iPadPro11inch1G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,2").model, .iPadPro11inch1G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,3").model, .iPadPro11inch1G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,4").model, .iPadPro11inch1G)
         XCTAssertEqual(DeviceIdentifier("iPad6,7").model, .iPadPro12d9inch1G)
         XCTAssertEqual(DeviceIdentifier("iPad6,8").model, .iPadPro12d9inch1G)
         XCTAssertEqual(DeviceIdentifier("iPad7,1").model, .iPadPro12d9inch2G)
         XCTAssertEqual(DeviceIdentifier("iPad7,2").model, .iPadPro12d9inch2G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,5").model, .iPadPro12d9inch3G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,6").model, .iPadPro12d9inch3G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,7").model, .iPadPro12d9inch3G)
+        XCTAssertEqual(DeviceIdentifier("iPad8,8").model, .iPadPro12d9inch3G)
 
         XCTAssertEqual(DeviceIdentifier("iPad6,11").model, .iPad5G)
         XCTAssertEqual(DeviceIdentifier("iPad6,12").model, .iPad5G)

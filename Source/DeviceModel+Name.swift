@@ -21,6 +21,9 @@ public extension DeviceModel {
         case .iPhone8: return "iPhone 8"
         case .iPhone8Plus: return "iPhone 8 Plus"
         case .iPhoneX: return "iPhone X"
+        case .iPhoneXR: return "iPhone XR"
+        case .iPhoneXS: return "iPhone XS"
+        case .iPhoneXSMax: return "iPhone XS Max"
 
         case .iPodTouch1G: return "iPod touch 1G"
         case .iPodTouch2G: return "iPod touch 2G"
@@ -42,8 +45,10 @@ public extension DeviceModel {
 
         case .iPadPro9d7inch1G: return "iPad Pro 9.7-Inch 1G"
         case .iPadPro10d5inch1G: return "iPad Pro 10.5-Inch 1G"
+        case .iPadPro11inch1G: return "iPad Pro 11-Inch 1G"
         case .iPadPro12d9inch1G: return "iPad Pro 12.9-Inch 1G"
         case .iPadPro12d9inch2G: return "iPad Pro 12.9-Inch 2G"
+        case .iPadPro12d9inch3G: return "iPad Pro 12.9-Inch 3G"
 
         case .iPad5G: return "iPad 5G"
         case .iPad6G: return "iPad 6G"
