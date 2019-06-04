@@ -1,7 +1,7 @@
 import Foundation
 
 public extension DeviceModel {
-    public var name: String {
+    var name: String {
         switch self {
         case .iPhone1G: return "iPhone 1G"
         case .iPhone3G: return "iPhone 3G"

@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIDevice {
-    public var deviceModel: DeviceModel {
+    var deviceModel: DeviceModel {
         var systemInfo = utsname()
         uname(&systemInfo)
 
@@ -31,17 +31,17 @@ public extension UIDevice {
     }
 
     @objc
-    public var isIpad: Bool {
+    var isIpad: Bool {
         return deviceModel.isIpad
     }
 
     @objc
-    public var isIphone: Bool {
+    var isIphone: Bool {
         return deviceModel.isIphone
     }
 
     @objc
-    public var isAppleTV: Bool {
+    var isAppleTV: Bool {
         return deviceModel.isAppleTV
     }
 }

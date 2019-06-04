@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/sebastianvarela/DeviceIdentificator"
   s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.swift_version = '5.0'
 
   s.author             = { "Sebastián Varela" => "sebastian.varela@s3ba.net" }
   s.social_media_url   = "http://twitter.com/skirmish84"
