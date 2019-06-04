@@ -43,6 +43,7 @@ internal struct DeviceIdentifier {
         case "iPod4,1": return .iPodTouch4G
         case "iPod5,1": return .iPodTouch5G
         case "iPod7,1": return .iPodTouch6G
+        case "iPod9,1": return .iPodTouch7G
 
         case "iPad1,1", "iPad1,2": return .iPad1G
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2G

@@ -31,6 +31,7 @@ public extension DeviceModel {
         case .iPodTouch4G: return "iPod touch 4G"
         case .iPodTouch5G: return "iPod touch 5G"
         case .iPodTouch6G: return "iPod touch 6G"
+        case .iPodTouch7G: return "iPod touch 7G"
 
         case .iPad1G: return "iPad 1G"
         case .iPad2G: return "iPad 2G"

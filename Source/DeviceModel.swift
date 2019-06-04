@@ -30,6 +30,7 @@ public enum DeviceModel: Equatable {
     case iPodTouch4G
     case iPodTouch5G
     case iPodTouch6G
+    case iPodTouch7G
 
     case iPad1G
     case iPad2G

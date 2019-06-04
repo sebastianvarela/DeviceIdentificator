@@ -111,6 +111,7 @@ public class DeviceIdentifierTests: XCTestCase {
         XCTAssertEqual(DeviceIdentifier("iPod4,1").model, .iPodTouch4G)
         XCTAssertEqual(DeviceIdentifier("iPod5,1").model, .iPodTouch5G)
         XCTAssertEqual(DeviceIdentifier("iPod7,1").model, .iPodTouch6G)
+        XCTAssertEqual(DeviceIdentifier("iPod9,1").model, .iPodTouch7G)
     }
 
     public func testAppleTVIdentificators() {
