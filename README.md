@@ -15,6 +15,7 @@ Support for iOS and tvOS
 
 ## Support
 For Swift 4 please use v1
+
 For Swift 5 please use v2+
 
 ## Installation
