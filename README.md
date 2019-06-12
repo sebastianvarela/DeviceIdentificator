@@ -13,6 +13,10 @@ UIDevice extension to fetch current device info such commercial name (iPhone X i
 ## Platforms 
 Support for iOS and tvOS
 
+## Support
+For Swift 4 please use v1
+For Swift 5 please use v2+
+
 ## Installation
 This framework is compatible with Carthage or Cocoapods, use one of both.
 ### Carthage
