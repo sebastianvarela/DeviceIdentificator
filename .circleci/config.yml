@@ -1,0 +1,16 @@
+version: 2
+
+jobs:
+  build:
+    macos:
+      xcode: "10.2.1"
+    steps:
+      - checkout
+      - run: xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-iOS -destination "platform=iOS Simulator,name=iPhone 7" | xcpretty -f `xcpretty-travis-formatter`
+      - run: bash <(curl -s https://codecov.io/bash) -cF iPhone -J 'DeviceIdentificator'
+      - run: xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-iOS -destination "platform=iOS Simulator,name=iPad Air 2" | xcpretty -f `xcpretty-travis-formatter`
+      - run: bash <(curl -s https://codecov.io/bash) -cF iPad -J 'DeviceIdentificator'
+      - run: xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-tvOS -destination "platform=tvOS Simulator,name=Apple TV" | xcpretty -f `xcpretty-travis-formatter`
+      - run: bash <(curl -s https://codecov.io/bash) -cF tvOS -J 'DeviceIdentificator'
+      - run: swiftlint lint
+      - run: pod lib lint      
