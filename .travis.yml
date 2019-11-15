@@ -3,6 +3,7 @@ osx_image: xcode10.2
 script:
 - set -o pipefail
 - swift --version
+- rake
 - xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-iOS -destination "platform=iOS Simulator,name=iPhone 7" | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF iPhone -J 'DeviceIdentificator'
 - xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-iOS -destination "platform=iOS Simulator,name=iPad Air 2" | xcpretty -f `xcpretty-travis-formatter`
@@ -10,4 +11,4 @@ script:
 - xcodebuild clean build test -project DeviceIdentificator.xcodeproj -scheme DeviceIdentificator-tvOS -destination "platform=tvOS Simulator,name=Apple TV" | xcpretty -f `xcpretty-travis-formatter`
 - bash <(curl -s https://codecov.io/bash) -cF tvOS -J 'DeviceIdentificator'
 - swiftlint lint
-- pod lib lint
+- bundle exec pod lib lint
