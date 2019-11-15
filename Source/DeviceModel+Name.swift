@@ -24,6 +24,9 @@ public extension DeviceModel {
         case .iPhoneXR: return "iPhone XR"
         case .iPhoneXS: return "iPhone XS"
         case .iPhoneXSMax: return "iPhone XS Max"
+        case .iPhone11: return "iPhone 11"
+        case .iPhone11Pro: return "iPhone 11 Pro"
+        case .iPhone11ProMax: return "iPhone 11 Pro Max"
 
         case .iPodTouch1G: return "iPod touch 1G"
         case .iPodTouch2G: return "iPod touch 2G"
@@ -41,18 +44,21 @@ public extension DeviceModel {
         case .iPadMini2: return "iPad Mini 2"
         case .iPadMini3: return "iPad Mini 3"
         case .iPadMini4: return "iPad Mini 4"
+        case .iPadMini5: return "iPad Mini 5"
         case .iPadAir1G: return "iPad Air"
         case .iPadAir2G: return "iPad Air 2"
+        case .iPadAir3G: return "iPad Air 3"
 
         case .iPadPro9d7inch1G: return "iPad Pro 9.7-Inch 1G"
         case .iPadPro10d5inch1G: return "iPad Pro 10.5-Inch 1G"
-        case .iPadPro11inch1G: return "iPad Pro 11-Inch 1G"
+        case .iPadPro11inch3G: return "iPad Pro 11-Inch 3G"
         case .iPadPro12d9inch1G: return "iPad Pro 12.9-Inch 1G"
         case .iPadPro12d9inch2G: return "iPad Pro 12.9-Inch 2G"
         case .iPadPro12d9inch3G: return "iPad Pro 12.9-Inch 3G"
 
         case .iPad5G: return "iPad 5G"
         case .iPad6G: return "iPad 6G"
+        case .iPad7G: return "iPad 7G"
 
         case .appleTV4G: return "Apple TV 4G"
         case .appleTV4K: return "Apple TV 4K"

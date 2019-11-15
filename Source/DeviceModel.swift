@@ -23,6 +23,9 @@ public enum DeviceModel: Equatable {
     case iPhoneXR
     case iPhoneXS
     case iPhoneXSMax
+    case iPhone11
+    case iPhone11Pro
+    case iPhone11ProMax
 
     case iPodTouch1G
     case iPodTouch2G
@@ -40,18 +43,21 @@ public enum DeviceModel: Equatable {
     case iPadMini2
     case iPadMini3
     case iPadMini4
+    case iPadMini5
     case iPadAir1G
     case iPadAir2G
+    case iPadAir3G
 
     case iPadPro9d7inch1G
     case iPadPro10d5inch1G
     case iPadPro12d9inch1G
     case iPadPro12d9inch2G
     case iPadPro12d9inch3G
-    case iPadPro11inch1G
+    case iPadPro11inch3G
 
     case iPad5G
     case iPad6G
+    case iPad7G
 
     case appleTV4G
     case appleTV4K
