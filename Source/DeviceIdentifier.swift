@@ -39,6 +39,11 @@ internal struct DeviceIdentifier {
         case "iPhone12,1": return .iPhone11
         case "iPhone12,3": return .iPhone11Pro
         case "iPhone12,5": return .iPhone11ProMax
+        case "iPhone12,8": return .iPhoneSE2G
+        case "iPhone13,1": return .iPhone12Mini
+        case "iPhone13,2": return .iPhone12
+        case "iPhone13,3": return .iPhone12Pro
+        case "iPhone13,4": return .iPhone12ProMax
 
         case "iPod1,1": return .iPodTouch1G
         case "iPod2,1": return .iPodTouch2G
@@ -61,19 +66,23 @@ internal struct DeviceIdentifier {
         case "iPad4,1", "iPad4,2", "iPad4,3": return .iPadAir1G
         case "iPad5,3", "iPad5,4": return .iPadAir2G
         case "iPad11,3", "iPad11,4": return .iPadAir3G
+        case "iPad13,1", "iPad13,2": return .iPadAir4G
 
         case "iPad6,3", "iPad6,4": return .iPadPro9d7inch1G
         case "iPad7,3", "iPad7,4": return .iPadPro10d5inch1G
-        case "iPad8,1", "iPad8,2": return .iPadPro11inch3G
-        case "iPad8,3", "iPad8,4": return .iPadPro11inch3G
+        case "iPad8,1", "iPad8,2": return .iPadPro11inch
+        case "iPad8,3", "iPad8,4": return .iPadPro11inch
+        case "iPad8,9", "iPad8,10": return .iPadPro11inch2G
         case "iPad6,7", "iPad6,8": return .iPadPro12d9inch1G
         case "iPad7,1", "iPad7,2": return .iPadPro12d9inch2G
         case "iPad8,5", "iPad8,6": return .iPadPro12d9inch3G
         case "iPad8,7", "iPad8,8": return .iPadPro12d9inch3G
+        case "iPad8,11", "iPad8,12": return .iPadPro12d9inch4G
 
         case "iPad6,11", "iPad6,12": return .iPad5G
         case "iPad7,5", "iPad7,6": return .iPad6G
         case "iPad7,11", "iPad7,12": return .iPad7G
+        case "iPad11,6", "iPad11,7": return .iPad8G
 
         case "AppleTV5,3": return .appleTV4G
         case "AppleTV6,2": return .appleTV4K
