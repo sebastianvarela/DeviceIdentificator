@@ -101,3 +101,4 @@ Carthage/Build/
 
 .DS_Store
 /.gems
+/Brewfile.lock.json
