@@ -4,20 +4,12 @@ public extension UIDevice {
     var deviceModel: DeviceModel {
         var systemInfo = utsname()
         uname(&systemInfo)
-
-        let machine = systemInfo.machine
-        let mirror = Mirror(reflecting: machine)
-        var systemIdentifier = ""
-
-        for child in mirror.children {
-            if let value = child.value as? Int8, value != 0 {
-                let escaped = UnicodeScalar(UInt8(value)).escaped(asASCII: false)
-                systemIdentifier.append(escaped)
-            }
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        let systemIdentifier = machineMirror.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
+            return identifier + String(UnicodeScalar(UInt8(value)))
         }
-
-        let deviceIdentifier = DeviceIdentifier(systemIdentifier)
-        return DeviceModel(deviceIdentifier)
+        return DeviceModel(rawValue: systemIdentifier) ?? .unknown(model: systemIdentifier)
     }
 
     @objc
