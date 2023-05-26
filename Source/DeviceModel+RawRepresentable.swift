@@ -174,7 +174,7 @@ public extension DeviceModel {
                     .iPhoneSimulator(simulatorModel, arch: rawValue) :
                     .iPadSimulator(simulatorModel, arch: rawValue)
             #elseif os(tvOS)
-                self = .appleTVSimulator(simulatorIdentifierValue, arch: rawValue)
+                self = .appleTVSimulator(simulatorModel, arch: rawValue)
             #endif
 
         default:
