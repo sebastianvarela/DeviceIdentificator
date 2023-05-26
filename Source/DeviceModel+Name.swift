@@ -92,9 +92,9 @@ public extension DeviceModel {
         case .appleTV4K2G: return "Apple TV 4K 2G"
         case .appleTV4K3G: return "Apple TV 4K 3G"
 
-        case .iPadSimulator: return "iPad Simulator"
-        case .iPhoneSimulator: return "iPhone Simulator"
-        case .appleTVSimulator: return "Apple TV Simulator"
+        case .iPadSimulator(let model, let arch): return "iPad Simulator (\(model.name) @ \(arch))"
+        case .iPhoneSimulator(let model, let arch): return "iPhone Simulator (\(model.name) @ \(arch))"
+        case .appleTVSimulator(let model, let arch): return "Apple TV Simulator (\(model.name) @ \(arch))"
 
         case .iPhoneUnknown(let model): return "Unknown iPhone (\(model))"
         case .iPadUnknown(let model): return "Unknown iPad (\(model))"

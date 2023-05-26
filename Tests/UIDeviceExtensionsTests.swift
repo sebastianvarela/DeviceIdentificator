@@ -5,7 +5,7 @@ public class DeviceIdentificatorTests: XCTestCase {
     public func testIsSimulator() {
         #if targetEnvironment(simulator)
             XCTAssertTrue(UIDevice.current.isSimulator)
-        XCTAssertTrue(UIDevice.current.deviceModelName.lowercased.contains("simulator"), UIDevice.current.deviceModelName as String)
+            XCTAssertTrue(UIDevice.current.deviceModelName.lowercased.contains("simulator"), UIDevice.current.deviceModelName as String)
         #else
             XCTAssertFalse(UIDevice.current.isSimulator)
         #endif
