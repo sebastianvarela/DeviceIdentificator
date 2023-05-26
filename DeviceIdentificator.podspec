@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DeviceIdentificator"
-  s.version      = "3.0.1"
+  s.version      = "3.0.2"
   s.swift_version = '5.0'
   s.summary      = "UIDeviceExtension to fetch current device info such commercial name (iPhone X instead of iPhone10,3)."
   s.description  = <<-DESC
