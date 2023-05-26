@@ -5,14 +5,15 @@ public class DeviceIdentificatorTests: XCTestCase {
     public func testIsSimulator() {
         #if targetEnvironment(simulator)
             XCTAssertTrue(UIDevice.current.isSimulator)
-            XCTAssertTrue(UIDevice.current.deviceModelName.lowercased.contains("simulator"), UIDevice.current.deviceModelName as String)
+            XCTAssertTrue(UIDevice.current.deviceModelName.lowercased.contains("simulator"),
+                          UIDevice.current.deviceModelName as String)
         #else
             XCTAssertFalse(UIDevice.current.isSimulator)
         #endif
     }
 
     public func testIsIpad() {
-        switch UI_USER_INTERFACE_IDIOM() {
+        switch UIDevice.current.userInterfaceIdiom {
         case .pad:
             XCTAssertTrue(UIDevice.current.isIpad)
         case .phone:
@@ -25,7 +26,7 @@ public class DeviceIdentificatorTests: XCTestCase {
     }
 
     public func testIsIphone() {
-        switch UI_USER_INTERFACE_IDIOM() {
+        switch UIDevice.current.userInterfaceIdiom {
         case .pad:
             XCTAssertFalse(UIDevice.current.isIphone)
         case .phone:
@@ -38,7 +39,7 @@ public class DeviceIdentificatorTests: XCTestCase {
     }
 
     public func testIsAppleTV() {
-        switch UI_USER_INTERFACE_IDIOM() {
+        switch UIDevice.current.userInterfaceIdiom {
         case .pad:
             XCTAssertFalse(UIDevice.current.isAppleTV)
         case .phone:

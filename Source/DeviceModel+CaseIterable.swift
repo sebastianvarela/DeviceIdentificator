@@ -52,7 +52,7 @@ public extension DeviceModel {
             .iPhone14Plus,
             .iPhone14Pro,
             .iPhone14ProMax,
-                
+
             // iPods
             .iPodTouch1G,
             .iPodTouch2G,
@@ -61,7 +61,7 @@ public extension DeviceModel {
             .iPodTouch5G,
             .iPodTouch6G,
             .iPodTouch7G,
-                
+
             // iPads
             .iPad1G(.wifi),
             .iPad1G(.celullar),
@@ -151,12 +151,12 @@ public extension DeviceModel {
             .iPadPro11inch4G(.celullar),
             .iPadPro12d9inch6G(.wifi),
             .iPadPro12d9inch6G(.celullar),
-                
+
             // Apple TV
             .appleTV4G,
             .appleTV4K,
             .appleTV4K2G,
-            .appleTV4K3G,
+            .appleTV4K3G
         ]
     }
 }

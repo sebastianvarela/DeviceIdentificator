@@ -103,4 +103,8 @@ public extension DeviceModel {
         case .unknown(let model): return "Unknown device (\(model))"
         }
     }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
 }

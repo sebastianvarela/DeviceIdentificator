@@ -6,9 +6,10 @@ public extension DeviceModel {
         self = DeviceModel(rawValue: deviceIdentifier)!
     }
 
+    // swiftlint:disable:next function_body_length cyclomatic_complexity
     init?(rawValue: String) {
         switch rawValue {
-            
+
         // iPhones
         case "iPhone1,1": self = .iPhone1G
         case "iPhone1,2": self = .iPhone3G
@@ -58,7 +59,7 @@ public extension DeviceModel {
         case "iPhone14,8": self = .iPhone14Plus
         case "iPhone15,2": self = .iPhone14Pro
         case "iPhone15,3": self = .iPhone14ProMax
-            
+
         // iPods
         case "iPod1,1": self = .iPodTouch1G
         case "iPod2,1": self = .iPodTouch2G
@@ -67,7 +68,7 @@ public extension DeviceModel {
         case "iPod5,1": self = .iPodTouch5G
         case "iPod7,1": self = .iPodTouch6G
         case "iPod9,1": self = .iPodTouch7G
-            
+
         // iPads
         case "iPad1,1": self = .iPad1G(.wifi)
         case "iPad1,2": self = .iPad1G(.celullar)
@@ -157,7 +158,7 @@ public extension DeviceModel {
         case "iPad14,4": self = .iPadPro11inch4G(.celullar)
         case "iPad14,5": self = .iPadPro12d9inch6G(.wifi)
         case "iPad14,6": self = .iPadPro12d9inch6G(.celullar)
-            
+
         // Apple TV
         case "AppleTV5,3": self = .appleTV4G
         case "AppleTV6,2": self = .appleTV4K
@@ -167,7 +168,8 @@ public extension DeviceModel {
         // Simulator
         case "i386", "x86_64", "arm64":
             let simulatorIdentifierValue = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "Unknown"
-            let simulatorModel = DeviceModel(rawValue: simulatorIdentifierValue) ?? .unknown(model: simulatorIdentifierValue)
+            let simulatorModel = DeviceModel(rawValue: simulatorIdentifierValue) ??
+                .unknown(model: simulatorIdentifierValue)
             #if os(iOS)
                 let smallerScreen = UIScreen.main.bounds.size.width < 768
                 self = smallerScreen ?
@@ -189,7 +191,7 @@ public extension DeviceModel {
             }
         }
     }
-    
+
     var rawValue: String {
         switch self {
         // iPhone
@@ -241,7 +243,7 @@ public extension DeviceModel {
         case .iPhone14Plus: return "iPhone14,8"
         case .iPhone14Pro: return "iPhone15,2"
         case .iPhone14ProMax: return "iPhone15,3"
-            
+
         // iPods
         case .iPodTouch1G: return "iPod1,1"
         case .iPodTouch2G: return "iPod2,1"
@@ -250,68 +252,68 @@ public extension DeviceModel {
         case .iPodTouch5G: return "iPod5,1"
         case .iPodTouch6G: return "iPod7,1"
         case .iPodTouch7G: return "iPod9,1"
-            
+
         // iPads
-        case .iPad1G: return "iPad1,1" //, "iPad1,2"
-        case .iPad2G: return "iPad2,1" //, "iPad2,2", "iPad2,3", "iPad2,4"
-        case .iPad3G: return "iPad3,1" //, "iPad3,2", "iPad3,3"
-        case .iPad4G: return "iPad3,4" //, "iPad3,5", "iPad3,6"
-        case .iPad5G: return "iPad6,11" //, "iPad6,12"
-        case .iPad6G: return "iPad7,5" //, "iPad7,6"
-        case .iPad7G: return "iPad7,11" //, "iPad7,12"
-        case .iPad8G: return "iPad11,6" //, "iPad11,7"
-        case .iPad9G: return "iPad12,1" //, "iPad12,2"
-        case .iPad10G: return "iPad13,18" //, "iPad13,19"
-            
+        case .iPad1G: return "iPad1,1" // , "iPad1,2"
+        case .iPad2G: return "iPad2,1" // , "iPad2,2", "iPad2,3", "iPad2,4"
+        case .iPad3G: return "iPad3,1" // , "iPad3,2", "iPad3,3"
+        case .iPad4G: return "iPad3,4" // , "iPad3,5", "iPad3,6"
+        case .iPad5G: return "iPad6,11" // , "iPad6,12"
+        case .iPad6G: return "iPad7,5" // , "iPad7,6"
+        case .iPad7G: return "iPad7,11" // , "iPad7,12"
+        case .iPad8G: return "iPad11,6" // , "iPad11,7"
+        case .iPad9G: return "iPad12,1" // , "iPad12,2"
+        case .iPad10G: return "iPad13,18" // , "iPad13,19"
+
         // iPad Minis
-        case .iPadMini1: return "iPad2,5" //, "iPad2,6", "iPad2,7"
-        case .iPadMini2: return "iPad4,4" //, "iPad4,5", "iPad4,6"
-        case .iPadMini3: return "iPad4,7" //, "iPad4,8", "iPad4,9"
-        case .iPadMini4: return "iPad5,1" //, "iPad5,2"
-        case .iPadMini5: return "iPad11,1" //, "iPad11,2"
-        case .iPadMini6: return "iPad14,1" //, "iPad14,2"
-            
+        case .iPadMini1: return "iPad2,5" // , "iPad2,6", "iPad2,7"
+        case .iPadMini2: return "iPad4,4" // , "iPad4,5", "iPad4,6"
+        case .iPadMini3: return "iPad4,7" // , "iPad4,8", "iPad4,9"
+        case .iPadMini4: return "iPad5,1" // , "iPad5,2"
+        case .iPadMini5: return "iPad11,1" // , "iPad11,2"
+        case .iPadMini6: return "iPad14,1" // , "iPad14,2"
+
         // iPad Air
-        case .iPadAir1G: return "iPad4,1" //, "iPad4,2", "iPad4,3"
-        case .iPadAir2G: return "iPad5,3" //, "iPad5,4"
-        case .iPadAir3G: return "iPad11,3" //, "iPad11,4"
-        case .iPadAir4G: return "iPad13,1" //, "iPad13,2"
-        case .iPadAir5G: return "iPad13,16" //, "iPad13,17"
-            
+        case .iPadAir1G: return "iPad4,1" // , "iPad4,2", "iPad4,3"
+        case .iPadAir2G: return "iPad5,3" // , "iPad5,4"
+        case .iPadAir3G: return "iPad11,3" // , "iPad11,4"
+        case .iPadAir4G: return "iPad13,1" // , "iPad13,2"
+        case .iPadAir5G: return "iPad13,16" // , "iPad13,17"
+
         // iPad Pro
-        case .iPadPro9d7inch1G: return "iPad6,3" //, "iPad6,4"
-        case .iPadPro12d9inch1G: return "iPad6,7" //, "iPad6,8"
-        case .iPadPro10d5inch1G: return "iPad7,3" //, "iPad7,4"
-        case .iPadPro12d9inch2G: return "iPad7,1" //, "iPad7,2"
-        case .iPadPro11inch: return "iPad8,1" //, "iPad8,2"
-        //case .iPadPro11inch: return "iPad8,3" //, "iPad8,4"
-        case .iPadPro11inch2G: return "iPad8,9" //, "iPad8,10"
-        case .iPadPro12d9inch3G: return "iPad8,5" //, "iPad8,6"
-        //case .iPadPro12d9inch3G: return "iPad8,7" //, "iPad8,8"
-        case .iPadPro12d9inch4G: return "iPad8,11" //, "iPad8,12"
-        case .iPadPro11inch3G: return "iPad13,4" //, "iPad13,5"
-        //case .iPadPro11inch3G: return "iPad13,6" //, "iPad13,7"
-        case .iPadPro12d9inch5G: return "iPad13,8" //, "iPad13,9"
-        //case .iPadPro12d9inch5G: return "iPad13,10" //, "iPad13,11"
-        case .iPadPro11inch4G: return "iPad14,3" //, "iPad14,4 "
-        case .iPadPro12d9inch6G: return "iPad14,5" //, "iPad14,6 "
+        case .iPadPro9d7inch1G: return "iPad6,3" // , "iPad6,4"
+        case .iPadPro12d9inch1G: return "iPad6,7" // , "iPad6,8"
+        case .iPadPro10d5inch1G: return "iPad7,3" // , "iPad7,4"
+        case .iPadPro12d9inch2G: return "iPad7,1" // , "iPad7,2"
+        case .iPadPro11inch: return "iPad8,1" // , "iPad8,2"
+        // case .iPadPro11inch: return "iPad8,3" //, "iPad8,4"
+        case .iPadPro11inch2G: return "iPad8,9" // , "iPad8,10"
+        case .iPadPro12d9inch3G: return "iPad8,5" // , "iPad8,6"
+        // case .iPadPro12d9inch3G: return "iPad8,7" //, "iPad8,8"
+        case .iPadPro12d9inch4G: return "iPad8,11" // , "iPad8,12"
+        case .iPadPro11inch3G: return "iPad13,4" // , "iPad13,5"
+        // case .iPadPro11inch3G: return "iPad13,6" //, "iPad13,7"
+        case .iPadPro12d9inch5G: return "iPad13,8" // , "iPad13,9"
+        // case .iPadPro12d9inch5G: return "iPad13,10" //, "iPad13,11"
+        case .iPadPro11inch4G: return "iPad14,3" // , "iPad14,4 "
+        case .iPadPro12d9inch6G: return "iPad14,5" // , "iPad14,6 "
 
         case .appleTV4G: return "AppleTV5,3"
         case .appleTV4K: return "AppleTV6,2"
         case .appleTV4K2G: return "AppleTV11,1"
         case .appleTV4K3G: return "AppleTV14,1"
-             
+
         case .iPadSimulator(_, let arch),
              .iPhoneSimulator(_, let arch),
              .appleTVSimulator(_, let arch):
             return arch
-            
+
         case .iPhoneUnknown(let model),
              .iPadUnknown(let model),
              .iPodUnknown(let model),
              .unknown(let model):
             return model
- 
+
         default:
             return "rawValue"
         }

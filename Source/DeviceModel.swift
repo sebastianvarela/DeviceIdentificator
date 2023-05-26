@@ -20,7 +20,7 @@ public enum PadVariant: String {
     case china
 }
 
-public indirect enum DeviceModel: Equatable, RawRepresentable, CaseIterable {
+public indirect enum DeviceModel: Equatable, Hashable, RawRepresentable, CaseIterable {
     case iPhone1G
     case iPhone3G
     case iPhone3GS
@@ -59,7 +59,7 @@ public indirect enum DeviceModel: Equatable, RawRepresentable, CaseIterable {
     case iPhone14Plus
     case iPhone14Pro
     case iPhone14ProMax
-    
+
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -85,7 +85,7 @@ public indirect enum DeviceModel: Equatable, RawRepresentable, CaseIterable {
     case iPadMini4(PadVariant)
     case iPadMini5(PadVariant)
     case iPadMini6(PadVariant)
-    
+
     case iPadAir1G(PadVariant)
     case iPadAir2G(PadVariant)
     case iPadAir3G(PadVariant)
