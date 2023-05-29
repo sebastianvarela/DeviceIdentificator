@@ -14,7 +14,7 @@ public class DeviceModelTests: XCTestCase {
     }
 
     public func test_iPad_simulator() {
-        let iPadSimulator = DeviceModel.iPadSimulator(.iPad1G(.celullar), arch: "x86")
+        let iPadSimulator = DeviceModel.iPadSimulator(.iPad1G(.cellular), arch: "x86")
 
         XCTAssertTrue(iPadSimulator.isSimulator)
         XCTAssertFalse(iPadSimulator.isIphone)

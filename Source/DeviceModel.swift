@@ -9,9 +9,9 @@ public enum PhoneVariant: String {
 
 public enum PadVariant: String {
     case wifi
-    case celullar
+    case cellular
     case wifiTera
-    case celullarTera
+    case cellularTera
     case gsm
     case gsmCdma
     case cdma
