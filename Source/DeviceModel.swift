@@ -59,6 +59,10 @@ public indirect enum DeviceModel: Equatable, Hashable, RawRepresentable, CaseIte
     case iPhone14Plus
     case iPhone14Pro
     case iPhone14ProMax
+    case iPhone15
+    case iPhone15Plus
+    case iPhone15Pro
+    case iPhone15ProMax
 
     case iPodTouch1G
     case iPodTouch2G

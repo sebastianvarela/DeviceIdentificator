@@ -59,6 +59,10 @@ public extension DeviceModel {
         case "iPhone14,8": self = .iPhone14Plus
         case "iPhone15,2": self = .iPhone14Pro
         case "iPhone15,3": self = .iPhone14ProMax
+        case "iPhone15,4": self = .iPhone15
+        case "iPhone15,5": self = .iPhone15Plus
+        case "iPhone16,1": self = .iPhone15Pro
+        case "iPhone16,2": self = .iPhone15ProMax
 
         // iPods
         case "iPod1,1": self = .iPodTouch1G

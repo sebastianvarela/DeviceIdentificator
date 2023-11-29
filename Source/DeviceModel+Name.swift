@@ -41,6 +41,10 @@ public extension DeviceModel {
         case .iPhone14Plus: return "iPhone 14 Plus"
         case .iPhone14Pro: return "iPhone 14 Pro"
         case .iPhone14ProMax: return "iPhone 14 Pro Max"
+        case .iPhone15: return "iPhone 15"
+        case .iPhone15Plus: return "iPhone 15 Plus"
+        case .iPhone15Pro: return "iPhone 15 Pro"
+        case .iPhone15ProMax: return "iPhone 15 Pro Max"
 
         case .iPodTouch1G: return "iPod touch 1G"
         case .iPodTouch2G: return "iPod touch 2G"
