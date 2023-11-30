@@ -20,6 +20,7 @@ public class DeviceModelTests: XCTestCase {
         XCTAssertFalse(iPadSimulator.isIphone)
         XCTAssertTrue(iPadSimulator.isIpad)
         XCTAssertFalse(iPadSimulator.isAppleTV)
+        XCTAssertFalse(iPadSimulator.isWatch)
     }
 
     public func test_iPhone_simulator() {
@@ -29,6 +30,7 @@ public class DeviceModelTests: XCTestCase {
         XCTAssertTrue(iPadSimulator.isIphone)
         XCTAssertFalse(iPadSimulator.isIpad)
         XCTAssertFalse(iPadSimulator.isAppleTV)
+        XCTAssertFalse(iPadSimulator.isWatch)
     }
 
     public func test_AppleTV_simulator() {
@@ -38,5 +40,22 @@ public class DeviceModelTests: XCTestCase {
         XCTAssertFalse(iPadSimulator.isIphone)
         XCTAssertFalse(iPadSimulator.isIpad)
         XCTAssertTrue(iPadSimulator.isAppleTV)
+        XCTAssertFalse(iPadSimulator.isWatch)
+   }
+    
+    public func test_Watch_simulator() {
+        let iPadSimulator = DeviceModel.watchSimulator(.appleWatch7S41mm(.gps), arch: "arm64")
+
+        XCTAssertTrue(iPadSimulator.isSimulator)
+        XCTAssertFalse(iPadSimulator.isIphone)
+        XCTAssertFalse(iPadSimulator.isIpad)
+        XCTAssertFalse(iPadSimulator.isAppleTV)
+        XCTAssertTrue(iPadSimulator.isWatch)
+    }
+    
+    public func test_current_device() {
+        let current = DeviceModel.current
+        
+        XCTAssertEqual(current, .appleTV4G)
     }
 }

@@ -3,6 +3,8 @@ import Foundation
 public extension DeviceModel {
     var name: String {
         switch self {
+        
+        // iPhones
         case .iPhone1G: return "iPhone 1G"
         case .iPhone3G: return "iPhone 3G"
         case .iPhone3GS: return "iPhone 3GS"
@@ -46,6 +48,7 @@ public extension DeviceModel {
         case .iPhone15Pro: return "iPhone 15 Pro"
         case .iPhone15ProMax: return "iPhone 15 Pro Max"
 
+        // iPods Touch
         case .iPodTouch1G: return "iPod touch 1G"
         case .iPodTouch2G: return "iPod touch 2G"
         case .iPodTouch3G: return "iPod touch 3G"
@@ -54,6 +57,7 @@ public extension DeviceModel {
         case .iPodTouch6G: return "iPod touch 6G"
         case .iPodTouch7G: return "iPod touch 7G"
 
+        // iPads Regular
         case .iPad1G: return "iPad 1G"
         case .iPad2G: return "iPad 2G"
         case .iPad3G: return "iPad 3G"
@@ -65,6 +69,7 @@ public extension DeviceModel {
         case .iPad9G: return "iPad 9G"
         case .iPad10G: return "iPad 10G"
 
+        // iPads Mini
         case .iPadMini1: return "iPad Mini"
         case .iPadMini2: return "iPad Mini 2"
         case .iPadMini3: return "iPad Mini 3"
@@ -72,12 +77,14 @@ public extension DeviceModel {
         case .iPadMini5: return "iPad Mini 5"
         case .iPadMini6: return "iPad Mini 6"
 
+        // iPads Air
         case .iPadAir1G: return "iPad Air"
         case .iPadAir2G: return "iPad Air 2"
         case .iPadAir3G: return "iPad Air 3"
         case .iPadAir4G: return "iPad Air 4"
         case .iPadAir5G: return "iPad Air 5"
 
+        // iPads Pro
         case .iPadPro9d7inch1G: return "iPad Pro 9.7-Inch 1G"
         case .iPadPro10d5inch1G: return "iPad Pro 10.5-Inch 1G"
         case .iPadPro11inch: return "iPad Pro 11-Inch"
@@ -91,20 +98,55 @@ public extension DeviceModel {
         case .iPadPro12d9inch5G: return "iPad Pro 12.9-Inch 5G"
         case .iPadPro12d9inch6G: return "iPad Pro 12.9-Inch 6G"
 
+        // TVs
         case .appleTV4G: return "Apple TV 4G"
         case .appleTV4K: return "Apple TV 4K"
         case .appleTV4K2G: return "Apple TV 4K 2G"
         case .appleTV4K3G: return "Apple TV 4K 3G"
 
-        case .iPadSimulator(let model, let arch): return "iPad Simulator (\(model.name) @ \(arch))"
-        case .iPhoneSimulator(let model, let arch): return "iPhone Simulator (\(model.name) @ \(arch))"
-        case .appleTVSimulator(let model, let arch): return "Apple TV Simulator (\(model.name) @ \(arch))"
+        // Watches
+        case .appleWatch38mm: return "Apple Watch Original 38mm"
+        case .appleWatch42mm: return "Apple Watch Original 42mm"
+        case .appleWatch1S38mm: return "Apple Watch Series 1 38mm"
+        case .appleWatch1S42mm: return "Apple Watch Series 1 42mm"
+        case .appleWatch2S38mm: return "Apple Watch Series 2 38mm"
+        case .appleWatch2S42mm: return "Apple Watch Series 2 42mm"
+        case .appleWatch3S38mm: return "Apple Watch Series 3 38mm"
+        case .appleWatch3S42mm: return "Apple Watch Series 3 42mm"
+        case .appleWatch4S40mm: return "Apple Watch Series 4 40mm"
+        case .appleWatch4S44mm: return "Apple Watch Series 4 44mm"
+        case .appleWatch5S40mm: return "Apple Watch Series 5 40mm"
+        case .appleWatch5S44mm: return "Apple Watch Series 5 44mm"
+        case .appleWatch6S40mm: return "Apple Watch Series 6 40mm"
+        case .appleWatch6S44mm: return "Apple Watch Series 6 44mm"
+        case .appleWatch7S41mm: return "Apple Watch Series 7 41mm"
+        case .appleWatch7S45mm: return "Apple Watch Series 7 45mm"
+        case .appleWatch8S41mm: return "Apple Watch Series 8 41mm"
+        case .appleWatch8S45mm: return "Apple Watch Series 8 45mm"
+        case .appleWatch9S41mm: return "Apple Watch Series 9 41mm"
+        case .appleWatch9S45mm: return "Apple Watch Series 9 45mm"
+        case .appleWatchSE40mm: return "Apple Watch SE1 40mm"
+        case .appleWatchSE44mm: return "Apple Watch SE1 44mm"
+        case .appleWatchSE2G40mm: return "Apple Watch SE2 40mm"
+        case .appleWatchSE2G44mm: return "Apple Watch SE2 44mm"
+        case .appleWatchUltra: return "Apple Watch Ultra 1"
+        case .appleWatchUltra2: return "Apple Watch Ultra 2"
+            
+        case .iPadSimulator(let model, let arch): return "Simulator \(model.name) @ \(arch)"
+        case .iPhoneSimulator(let model, let arch): return "Simulator \(model.name) @ \(arch)"
+        case .appleTVSimulator(let model, let arch): return "Simulator \(model.name) @ \(arch)"
+        case .watchSimulator(let model, let arch): return "Simulator \(model.name) @ \(arch)"
 
-        case .iPhoneUnknown(let model): return "Unknown iPhone (\(model))"
-        case .iPadUnknown(let model): return "Unknown iPad (\(model))"
-        case .iPodUnknown(let model): return "Unknown iPod (\(model))"
-        case .appleTVUnknown(let model): return "Unknown AppleTV (\(model))"
-        case .unknown(let model): return "Unknown device (\(model))"
+        case .iPhoneUnknown(let model): return "Unknown iPhone: \(model)"
+        case .iPadUnknown(let model): return "Unknown iPad: \(model)"
+        case .iPodUnknown(let model): return "Unknown iPod: \(model)"
+        case .appleTVUnknown(let model): return "Unknown AppleTV: \(model)"
+        case .unknown(let model): return "Unknown device: \(model)"
+        case .macUnknown(let model): return "Unknown Mac: \(model)"
+            
+        case .macCatalyst: return "Mac Catalyst"
+        case .macDesignedForIpad: return "Mac Designed for iPad"
+        case .mac(let variant): return "Mac \(variant.name)"
         }
     }
 

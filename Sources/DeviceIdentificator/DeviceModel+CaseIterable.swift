@@ -52,6 +52,10 @@ public extension DeviceModel {
             .iPhone14Plus,
             .iPhone14Pro,
             .iPhone14ProMax,
+            .iPhone15,
+            .iPhone15Plus,
+            .iPhone15Pro,
+            .iPhone15ProMax,
 
             // iPods
             .iPodTouch1G,

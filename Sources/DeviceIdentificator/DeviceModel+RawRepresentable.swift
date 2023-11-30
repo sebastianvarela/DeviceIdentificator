@@ -1,5 +1,7 @@
 import Foundation
-import UIKit
+#if canImport(UIKit)
+    import UIKit
+#endif
 
 public extension DeviceModel {
     init(deviceIdentifier: String) {
@@ -8,6 +10,11 @@ public extension DeviceModel {
 
     // swiftlint:disable:next function_body_length cyclomatic_complexity
     init?(rawValue: String) {
+        if let macVariant = MacVariant(rawValue: rawValue) {
+            self = .mac(macVariant)
+            return
+        }
+        
         switch rawValue {
 
         // iPhones
@@ -168,6 +175,60 @@ public extension DeviceModel {
         case "AppleTV6,2": self = .appleTV4K
         case "AppleTV11,1": self = .appleTV4K2G
         case "AppleTV14,1": self = .appleTV4K3G
+            
+        // Watches
+        case "Watch1,1": self = .appleWatch38mm
+        case "Watch1,2": self = .appleWatch42mm
+        case "Watch2,6": self = .appleWatch1S38mm
+        case "Watch2,7": self = .appleWatch1S42mm
+        case "Watch2,3": self = .appleWatch2S38mm
+        case "Watch2,4": self = .appleWatch2S42mm
+        case "Watch3,1": self = .appleWatch3S38mm(.gpsAndCelullar)
+        case "Watch3,2": self = .appleWatch3S42mm(.gpsAndCelullar)
+        case "Watch3,3": self = .appleWatch3S38mm(.gps)
+        case "Watch3,4": self = .appleWatch3S42mm(.gps)
+        case "Watch4,1": self = .appleWatch4S40mm(.gps)
+        case "Watch4,2": self = .appleWatch4S44mm(.gps)
+        case "Watch4,3": self = .appleWatch4S40mm(.gpsAndCelullar)
+        case "Watch4,4": self = .appleWatch4S44mm(.gpsAndCelullar)
+        case "Watch5,1": self = .appleWatch5S40mm(.gps)
+        case "Watch5,2": self = .appleWatch5S44mm(.gps)
+        case "Watch5,3": self = .appleWatch5S40mm(.gpsAndCelullar)
+        case "Watch5,4": self = .appleWatch5S44mm(.gpsAndCelullar)
+        case "Watch5,9": self = .appleWatchSE40mm(.gps)
+        case "Watch5,10": self = .appleWatchSE44mm(.gps)
+        case "Watch5,11": self = .appleWatchSE40mm(.gpsAndCelullar)
+        case "Watch5,12": self = .appleWatchSE44mm(.gpsAndCelullar)
+        case "Watch6,1": self = .appleWatch6S40mm(.gps)
+        case "Watch6,2": self = .appleWatch6S44mm(.gps)
+        case "Watch6,3": self = .appleWatch6S40mm(.gpsAndCelullar)
+        case "Watch6,4": self = .appleWatch6S44mm(.gpsAndCelullar)
+        case "Watch6,6": self = .appleWatch7S41mm(.gps)
+        case "Watch6,7": self = .appleWatch7S45mm(.gps)
+        case "Watch6,8": self = .appleWatch7S41mm(.gpsAndCelullar)
+        case "Watch6,9": self = .appleWatch7S45mm(.gpsAndCelullar)
+        case "Watch6,10": self = .appleWatchSE2G40mm(.gps)
+        case "Watch6,11": self = .appleWatchSE2G44mm(.gps)
+        case "Watch6,12": self = .appleWatchSE2G40mm(.gpsAndCelullar)
+        case "Watch6,13": self = .appleWatchSE2G44mm(.gpsAndCelullar)
+        case "Watch6,14": self = .appleWatch8S41mm(.gps)
+        case "Watch6,15": self = .appleWatch8S45mm(.gps)
+        case "Watch6,16": self = .appleWatch8S41mm(.gpsAndCelullar)
+        case "Watch6,17": self = .appleWatch8S45mm(.gpsAndCelullar)
+        case "Watch6,18": self = .appleWatchUltra
+        case "Watch7,1": self = .appleWatch9S41mm(.gps)
+        case "Watch7,2": self = .appleWatch9S45mm(.gps)
+        case "Watch7,3": self = .appleWatch9S41mm(.gpsAndCelullar)
+        case "Watch7,4": self = .appleWatch9S45mm(.gpsAndCelullar)
+        case "Watch7,5": self = .appleWatchUltra2
+
+        #if targetEnvironment(macCatalyst) || os(iOS)
+        case "arm64" where ProcessInfo.processInfo.isiOSAppOnMac:
+            self = .macCatalyst
+
+        case "arm64" where ProcessInfo.processInfo.isMacCatalystApp:
+            self = .macDesignedForIpad
+        #endif
 
         // Simulator
         case "i386", "x86_64", "arm64":
@@ -181,8 +242,12 @@ public extension DeviceModel {
                     .iPadSimulator(simulatorModel, arch: rawValue)
             #elseif os(tvOS)
                 self = .appleTVSimulator(simulatorModel, arch: rawValue)
+            #elseif os(watchOS)
+                self = .watchSimulator(simulatorModel, arch: rawValue)
+            #else
+                self = .unknown(model: rawValue)
             #endif
-
+            
         default:
             if rawValue.hasPrefix("iPhone") {
                 self = .iPhoneUnknown(model: rawValue)
@@ -190,6 +255,8 @@ public extension DeviceModel {
                 self = .iPodUnknown(model: rawValue)
             } else if rawValue.hasPrefix("iPad") {
                 self = .iPadUnknown(model: rawValue)
+            } else if rawValue.hasPrefix("Mac") {
+                self = .macUnknown(model: rawValue)
             } else {
                 self = .unknown(model: rawValue)
             }

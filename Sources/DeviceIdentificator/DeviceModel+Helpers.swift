@@ -3,7 +3,7 @@ import Foundation
 public extension DeviceModel {
     var isSimulator: Bool {
         switch self {
-        case .iPadSimulator, .iPhoneSimulator, .appleTVSimulator:
+        case .iPadSimulator, .iPhoneSimulator, .appleTVSimulator, .watchSimulator:
             return true
         default:
             return false
@@ -11,14 +11,18 @@ public extension DeviceModel {
     }
 
     var isAppleTV: Bool {
-        return name.hasPrefix("Apple TV")
+        return name.contains("Apple TV")
     }
 
     var isIpad: Bool {
-        return name.hasPrefix("iPad")
+        return name.contains("iPad")
     }
 
     var isIphone: Bool {
-        return name.hasPrefix("iPhone")
+        return name.contains("iPhone")
+    }
+    
+    var isWatch: Bool {
+        return name.contains("Watch")
     }
 }
