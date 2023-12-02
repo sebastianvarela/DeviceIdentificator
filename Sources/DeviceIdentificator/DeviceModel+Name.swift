@@ -20,9 +20,9 @@ public extension DeviceModel {
         case .macDesignedForIpad:
             return "Mac Designed for iPad"
         case .unknown(model: let model):
-            return model
-        case .simulator(let model, _):
-            return model.name
+            return "Unknown device: \(model)"
+        case .simulator(let model, let arch):
+            return "Simulator \(model.name) @ \(arch)"
         }
         /*
         switch self {
