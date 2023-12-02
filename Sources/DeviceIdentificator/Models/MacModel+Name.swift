@@ -1,11 +1,6 @@
 import Foundation
 
-public enum MacVariant: String {
-    case miniM1 = "Macmini9,1"
-    
-}
-
-public extension MacVariant {
+public extension MacModel {
     var name: String {
         switch self {
         case .miniM1:

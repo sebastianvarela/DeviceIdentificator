@@ -3,6 +3,29 @@ import Foundation
 public extension DeviceModel {
     var name: String {
         switch self {
+        case .iPod(let model):
+            return model.name
+        case .iPhone(let model):
+            return model.name
+        case .iPad(let model):
+            return model.name
+        case .appleWatch(let model):
+            return model.name
+        case .appleTV(let model):
+            return model.name
+        case .mac(let model):
+            return model.name
+        case .macCatalyst:
+            return "Mac Catalyst"
+        case .macDesignedForIpad:
+            return "Mac Designed for iPad"
+        case .unknown(model: let model):
+            return model
+        case .simulator(let model, _):
+            return model.name
+        }
+        /*
+        switch self {
         
         // iPhones
         case .iPhone1G: return "iPhone 1G"
@@ -147,10 +170,8 @@ public extension DeviceModel {
         case .macCatalyst: return "Mac Catalyst"
         case .macDesignedForIpad: return "Mac Designed for iPad"
         case .mac(let variant): return "Mac \(variant.name)"
-        }
-    }
 
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
+        }
+        */
     }
 }
