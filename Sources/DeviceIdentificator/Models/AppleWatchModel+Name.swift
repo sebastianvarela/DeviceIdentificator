@@ -1,10 +1,52 @@
 import Foundation
 
-public extension AppleWatchModel {
+public extension DeviceModel.AppleWatchModel {
     var name: String {
         switch self {
-        default:
-            return "AppleWatchModel"
+        case .original_38mm:            return "Apple Watch Original 38mm"
+        case .original_42mm:            return "Apple Watch Original 42mm"
+        case .series1_38mm:             return "Apple Watch Series 1 38mm"
+        case .series1_42mm:             return "Apple Watch Series 1 42mm"
+        case .series2_38mm:             return "Apple Watch Series 2 38mm"
+        case .series2_42mm:             return "Apple Watch Series 2 42mm"
+        case .series3_38mmGPS:          return "Apple Watch Series 3 38mm"
+        case .series3_38mmCelullar:     return "Apple Watch Series 3 38mm"
+        case .series3_42mmGPS:          return "Apple Watch Series 3 42mm"
+        case .series3_42mmCelullar:     return "Apple Watch Series 3 42mm"
+        case .series4_40mmGPS:          return "Apple Watch Series 4 40mm"
+        case .series4_40mmCelullar:     return "Apple Watch Series 4 40mm"
+        case .series4_44mmGPS:          return "Apple Watch Series 4 44mm"
+        case .series4_44mmCelullar:     return "Apple Watch Series 4 44mm"
+        case .series5_40mmGPS:          return "Apple Watch Series 5 40mm"
+        case .series5_40mmCelullar:     return "Apple Watch Series 5 40mm"
+        case .series5_44mmGPS:          return "Apple Watch Series 5 44mm"
+        case .series5_44mmCelullar:     return "Apple Watch Series 5 44mm"
+        case .series6_40mmGPS:          return "Apple Watch Series 6 40mm"
+        case .series6_40mmCelullar:     return "Apple Watch Series 6 40mm"
+        case .series6_44mmGPS:          return "Apple Watch Series 6 44mm"
+        case .series6_44mmCelullar:     return "Apple Watch Series 6 44mm"
+        case .series7_41mmGPS:          return "Apple Watch Series 7 41mm"
+        case .series7_41mmCelullar:     return "Apple Watch Series 7 41mm"
+        case .series7_45mmGPS:          return "Apple Watch Series 7 45mm"
+        case .series7_45mmCelullar:     return "Apple Watch Series 7 45mm"
+        case .series8_41mmGPS:          return "Apple Watch Series 8 41mm"
+        case .series8_41mmCelullar:     return "Apple Watch Series 8 41mm"
+        case .series8_45mmGPS:          return "Apple Watch Series 8 45mm"
+        case .series8_45mmCelullar:     return "Apple Watch Series 8 45mm"
+        case .series9_41mmGPS:          return "Apple Watch Series 9 41mm"
+        case .series9_41mmCelullar:     return "Apple Watch Series 9 41mm"
+        case .series9_45mmGPS:          return "Apple Watch Series 9 45mm"
+        case .series9_45mmCelullar:     return "Apple Watch Series 9 45mm"
+        case .SE_40mmGPS:               return "Apple Watch SE1 40mm"
+        case .SE_40mmCelullar:          return "Apple Watch SE1 40mm"
+        case .SE_44mmGPS:               return "Apple Watch SE1 44mm"
+        case .SE_44mmCelullar:          return "Apple Watch SE1 44mm"
+        case .SE2_40mmGPS:              return "Apple Watch SE2 40mm"
+        case .SE2_40mmCelullar:         return "Apple Watch SE2 40mm"
+        case .SE2_44mmGPS:              return "Apple Watch SE2 44mm"
+        case .SE2_44mmCelullar:         return "Apple Watch SE2 44mm"
+        case .ultra:                    return "Apple Watch Ultra 1"
+        case .ultra2:                   return "Apple Watch Ultra 2"
         }
     }
 }

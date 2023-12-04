@@ -3,7 +3,7 @@ import Foundation
     import WatchKit
 #endif
 
-public indirect enum DeviceModel: Equatable, Hashable, RawRepresentable, CaseIterable, CustomStringConvertible {
+public indirect enum DeviceModel: Equatable, CaseIterable, CustomStringConvertible {
     public static let current: DeviceModel = {
         #if os(macOS)
             let service = IOServiceGetMatchingService(kIOMasterPortDefault,
@@ -43,13 +43,4 @@ public indirect enum DeviceModel: Equatable, Hashable, RawRepresentable, CaseIte
     case macDesignedForIpad
     case unknown(model: String)
     case simulator(DeviceModel, arch: String)
-    
-    public init(deviceIdentifier: String) {
-        self = DeviceModel(rawValue: deviceIdentifier) ?? .unknown(model: deviceIdentifier)
-    }
-    
-    // - Hashable
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(rawValue)
-    }
 }

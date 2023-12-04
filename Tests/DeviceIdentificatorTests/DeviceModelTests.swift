@@ -2,14 +2,30 @@
 import XCTest
 
 public class DeviceModelTests: XCTestCase {
-    public func testDeviceIdentifierInit() {
-        XCTAssertEqual(DeviceModel(deviceIdentifier: "hakuna"), .unknown(model: "hakuna"))
-        XCTAssertEqual(DeviceModel(deviceIdentifier: "iPhone5,2"), .iPhone(.iPhone5Global))
+    public func testDeviceIdentifierInitForKnowID() {
+        let device = DeviceModel(deviceIdentifier: "iPhone5,2")
+
+        XCTAssertEqual(device, .iPhone(.iPhone5Global))
+        XCTAssertEqual(device.deviceIdentifier, "iPhone5,2")
     }
 
-    public func testRawValueInit() {
+    public func testDeviceIdentifierInitForUnknowID() {
+        let device = DeviceModel(deviceIdentifier: "hakuna")
+
+        XCTAssertEqual(device, .unknown(model: "hakuna"))
+        XCTAssertEqual(device.deviceIdentifier, "hakuna")
+    }
+
+    public func testInitFromDeviceIdentifier() {
         DeviceModel.allCases.forEach { model in
-            XCTAssertEqual(DeviceModel(rawValue: model.rawValue), model)
+            if let deviceIdentifier = model.deviceIdentifier {
+                if model.isSimulator {
+                    let simulatedModel = DeviceModel(deviceIdentifier: deviceIdentifier)
+                    XCTAssertEqual(.simulator(simulatedModel, arch: model.architecture!), model)
+                } else {
+                    XCTAssertEqual(DeviceModel(deviceIdentifier: deviceIdentifier), model)
+                }
+            }
         }
     }
 
@@ -34,7 +50,7 @@ public class DeviceModelTests: XCTestCase {
     }
 
     public func test_AppleTV_simulator() {
-        let iPadSimulator = DeviceModel.simulator(.appleTV(.appleTV4G), arch: "x86")
+        let iPadSimulator = DeviceModel.simulator(.appleTV(.tvHD), arch: "x86")
 
         XCTAssertTrue(iPadSimulator.isSimulator)
         XCTAssertFalse(iPadSimulator.isIphone)
@@ -56,6 +72,6 @@ public class DeviceModelTests: XCTestCase {
     public func test_current_device() {
         let current = DeviceModel.current
         
-        XCTAssertEqual(current, .appleTV(.appleTV4G))
+        XCTAssertEqual(current, .appleTV(.tv4K2G))
     }
 }

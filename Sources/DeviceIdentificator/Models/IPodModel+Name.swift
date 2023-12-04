@@ -1,6 +1,6 @@
 import Foundation
 
-public extension IPodModel {
+public extension DeviceModel.IPodModel {
     var name: String {
         switch self {
         case .iPodTouch1G: return "iPod touch 1G"

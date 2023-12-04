@@ -1,10 +1,9 @@
 import Foundation
 
 public extension DeviceModel.MacModel {
-    var name: String {
+    var processor: DeviceModel.Processor {
         switch self {
-        case .miniM1:
-            return "Mini M1"
+        case .miniM1: return .appleM1
         }
     }
 }
