@@ -2,21 +2,21 @@
 import XCTest
 
 public class DeviceModelTests: XCTestCase {
-    public func testDeviceIdentifierInitForKnowID() {
+    public func test_device_identifier_init_for_know_id() {
         let device = DeviceModel(deviceIdentifier: "iPhone5,2")
 
         XCTAssertEqual(device, .iPhone(.iPhone5Global))
         XCTAssertEqual(device.deviceIdentifier, "iPhone5,2")
     }
 
-    public func testDeviceIdentifierInitForUnknowID() {
+    public func test_device_identifier_init_for_unknown_id() {
         let device = DeviceModel(deviceIdentifier: "hakuna")
 
         XCTAssertEqual(device, .unknown(model: "hakuna"))
         XCTAssertEqual(device.deviceIdentifier, "hakuna")
     }
 
-    public func testInitFromDeviceIdentifier() {
+    public func test_init_from_device_identifier() {
         DeviceModel.allCases.forEach { model in
             if let deviceIdentifier = model.deviceIdentifier {
                 if model.isSimulator {
@@ -30,13 +30,30 @@ public class DeviceModelTests: XCTestCase {
     }
 
     public func test_iPad_simulator() {
-        let iPadSimulator = DeviceModel.simulator(.iPad(.iPad1Celullar), arch: "x86")
+        let iPadSimulator = DeviceModel.simulator(.iPad(.gen1Celullar), arch: "x86")
 
         XCTAssertTrue(iPadSimulator.isSimulator)
         XCTAssertFalse(iPadSimulator.isIphone)
         XCTAssertTrue(iPadSimulator.isIpad)
         XCTAssertFalse(iPadSimulator.isAppleTV)
         XCTAssertFalse(iPadSimulator.isWatch)
+    }
+    
+    public func test_iPhone_simplename_variants() {
+        DeviceModel.IPhoneModel.allCases.forEach { variant in
+            let model = DeviceModel.iPhone(variant)
+            
+            XCTAssertTrue(model.name.contains(model.simpleName))
+        }
+    }
+    
+    public func test_iPad_simplename_variants() {
+        DeviceModel.IPadModel.allCases.forEach { variant in
+            let model = DeviceModel.iPad(variant)
+            
+            XCTAssertTrue(model.name.contains(model.simpleName))
+            XCTAssertTrue(model.name.count > model.simpleName.count)
+        }
     }
 
     public func test_iPhone_simulator() {
@@ -72,6 +89,6 @@ public class DeviceModelTests: XCTestCase {
     public func test_current_device() {
         let current = DeviceModel.current
         
-        XCTAssertEqual(current, .appleTV(.tv4K2G))
+        XCTAssertEqual(current, .iPad(.gen2GSM))
     }
 }

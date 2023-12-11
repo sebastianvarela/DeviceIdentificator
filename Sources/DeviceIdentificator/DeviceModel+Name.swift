@@ -1,6 +1,16 @@
 import Foundation
 
 public extension DeviceModel {
+    /// Name of the device without the variant. `iPad 1G` instead of `iPad 1G (Wifi)`
+    var simpleName: String {
+        if #available(iOS 16.0, *) {
+            return name.replacing(/\ \(.+?\)/, with: "")
+        } else {
+            return name.replacingOccurrences(of: "\\([ \\w]*\\)", with: "$1", options: [.regularExpression])
+        }
+    }
+    
+    /// Name of the device. Including his variant.
     var name: String {
         switch self {
         case .iPod(let model):

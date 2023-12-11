@@ -11,7 +11,7 @@ let package = Package(
         .visionOS(.v1),
         .iOS(.v14),
         .macCatalyst(.v14),
-        .macOS(.v10_13)
+        .macOS(.v13)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -29,3 +29,12 @@ let package = Package(
             dependencies: ["DeviceIdentificator"]),
     ]
 )
+
+let swiftSettings: [SwiftSetting] = [
+    .enableUpcomingFeature("BareSlashRegexLiterals"),
+]
+
+for target in package.targets {
+    target.swiftSettings = target.swiftSettings ?? []
+    target.swiftSettings?.append(contentsOf: swiftSettings)
+}
